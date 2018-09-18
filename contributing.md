@@ -8,12 +8,11 @@ project you agree to abide by its terms.
 
 Ensure your pull request adheres to the following guidelines:
 
-- Make sure you take care of this
-- And this as well
-- And don't forget to check this
+- Do not submit spam.
+- Do not submit guru courses.
+- Make sure your submission is awesome, and not just average.
 
 Thank you for your suggestions!
-
 
 ## Updating your PR
 
