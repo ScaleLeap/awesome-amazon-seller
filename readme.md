@@ -10,7 +10,7 @@
 
 ---
 
-## Software & Tools
+## Software and Tools
 
 - [Amzmailer](https://amzmailer.com/) - feedback software and email autoresponder to send Amazon customers automated emails.
 - [ASINspector](asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
