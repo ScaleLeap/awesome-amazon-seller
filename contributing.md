@@ -6,6 +6,15 @@ project you agree to abide by its terms.
 
 ---
 
+## What kind of contributions are accepted?
+
+Make sure to read the [the awesome manifesto](https://github.com/sindresorhus/awesome/blob/master/awesome.md)
+to understand what this list is about.
+
+This repository is intended for an ***awesome*** list of resources for Amazon sellers.
+
+If you have a resource that does not fit into any of the categories, do not worry, we can start a new category or create a Misc category. Go ahead and submit it anyways.
+
 ## How to contribute a resource?
 
 ### Pull request
