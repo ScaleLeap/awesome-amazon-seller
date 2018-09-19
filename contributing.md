@@ -6,11 +6,19 @@ project you agree to abide by its terms.
 
 ---
 
-Ensure your pull request adheres to the following guidelines:
+## Ensure your pull request adheres to the following guidelines:
 
-- Do not submit spam.
-- Do not submit guru courses.
+### Do
+
 - Make sure your submission is awesome, and not just average.
+- If you are sending a PR, make sure you insert the resource in alphabetical order.
+- Tone down the marketing in the description. Try to stay factual.
+
+### Do Not
+
+- Submit spam.
+- Submit guru courses.
+- Submit affiliate links.
 
 Thank you for your suggestions!
 
