@@ -2,37 +2,79 @@
 
 > A curated list of tools and resources for Amazon sellers.
 
+## Table of Contents
 
-## Contents
+- [Software and Tools](#software-and-tools)
+- [Podcasts](#podcasts)
+- [Blogs](#blogs)
 
-- [Section](#section)
-- [Another Section](#another-section)
+---
 
+## Software & Tools
 
-## Section
+- [Amzmailer](https://amzmailer.com/) - feedback software and email autoresponder to send Amazon customers automated emails.
+- [ASINspector](asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
+- [BQool](https://www.bqool.com/) - scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
+- [CashCowPro](https://www.cashcowpro.com/) - sales data, keyword tracking, feedback collection, inventory monitoring, price split testing.
+- [FeedbackExpress](https://www.feedbackexpress.com/) - makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
+- [Feedbackwhiz](https://www.feedbackwhiz.com/) - software for merchants to boost their Amazon business, repair feedback, improve product reviews, and automate high-volume emails.
+- [Feedbackz](https://www.feedbackz.com/) - built for marketing savvy Amazon sellers seeking more beautiful and more powerfully targeted automatic follow-up email funnels.
+- [Forecastly](https://www.forecast.ly/) - predict future product demand, make fast and accurate buying decisions.
+- [ForecastRx](https://www.forecastrx.com/) - inventory forecasting solution. Projects future demand so you can purchase the right product, in the right quantity, at the right time.
+- [Helium10](https://www.helium10.com/) - software suite contains over a dozen tools that help find high ranking keywords, identify trends, monitor competitors, and fully optimize product listings to increase sales.
+- [HelloProfit](https://helloprofit.com/) - lets you view all your sales & profit data from different merchant accounts from one dashboard.
+- [Jungle Scout](https://www.junglescout.com/) - track and compare key product metrics, database allows you to filter products across multiple categories by demand, price, estimated sales, rating, seasonality, dimensions and more, find out which products sell and which niches have high opportunity.
+- [Keyword Tool](https://keywordtool.io/amazon) - finds great keywords using Amazon autocomplete.
+- [MerchantWords](https://www.merchantwords.com/) - finds highly specific keyword phrases that help buyers find what you are selling.
+- [Prestozon](https://prestozon.com/) - Automation and analytics for Amazon HSA & sponsored products ads.
+- [SellerApp](https://www.sellerapp.com/) - product research, product ideas, listing quality, product alerts, product source, keyword research, ppc analyzer, and more.
+- [SellerLabs](https://www.sellerlabs.com/tools/) - several tools to manage ads, discover profitable keywords and products, get more product reviews and better seller feedback, simplify inventory and financial management for the amazon marketplace.
+- [SellerLegend](https://sellerlegend.com/) - near real-time orders download, intelligent KPI dashboards, inventory management, notifications, refunds, historical cost of goods, operating expenses, all America & Europe marketplaces, financial transactions, Europe vat.
+- [Sellics](https://sellics.com) - combines everything you need to manage and grow your Amazon business in one integrated software. Features that work together to help you become more successful on Amazon.
+- [Skubana](https://www.skubana.com/) - powers orders, inventory and business intelligence for the world's top high-volume brands and retailers.
+- [Sonar](http://sonar-tool.com/) - free Amazon keyword research tool from Sellics.
+- [Splitly](https://splitly.com/) - algorithmic split testing, automated pricing optimization, keyword rank tracking.
+- [TradeGecko](https://www.tradegecko.com/) - cloud based inventory and order management software for modern online businesses.
+- [WordTree](https://www.wordtree.io/) - keyword tools to grow your search traffic, research your competitors, and monitor your niche.
+- [xSellco](https://www.xsellco.com/) - centralize customer queries, target positive feedback by requesting reviews from happy customers, automatically reprice.
 
-About this section. Optional. Keep this short and focus on the list.
+---
 
-- [List item](http://example.com)
-- [List item](http://example.com)
+## Podcasts
 
+- [AM/PM Podcast](https://www.ampmpodcast.com/) - Hosted by Manny Coats (Helium 10). Amazon selling tips for sellers at any step of the Amazon seller journey. From best-in-class interviews with six and seven figure Amazon sellers to instructional how-to education.
+- [Amazing FBA](https://amazingfba.com/blog-podcast/) - Hosted by Michael Veazey. Podcast about selling on Amazon, especially white label products with a focus on UK markets.
+- [AmzSecrets](https://amzsecrets.com/amazon-private-label-podcast/) - Hosted by Ed Rosenberg. Gives you the latest strategies, secrets, tips, from both our own brands, and professional sellers, business leaders, and entrepreneurs.
+- [EcomCrew Podcast](https://www.ecomcrew.com/ecomcrew-podcast/) - Real world e-commerce experience without any online marketing fluff!
+- [Follow The Data](https://viral-launch.com/follow-the-data-amazon-fba-seller-podcast.html) - Hosted by Cameron Yoder (Viral Launch). The goal of this podcast is to help you successfully dive deeper into your own Amazon seller journey, using data as the anchor through that journey.
+- [Keyword: The Amazon Insider Podcast](http://keywordpodcast.com/) - Hosted by Kate Valentine. Delivers authoritative content exclusively from former and current Amazon employees.
+- [Private Label Movement](https://privatelabelmovement.com/) - Hosted by Kevin Rizer. No-nonsense down to earth feel, and for Kevin’s intriguing and unconventional interview style, the podcast publishes two new episodes each week.
+- [The Ecommerce Momentum](https://ecommercemomentum.com/) - Hosted by Stephen Peterson. Interviews with the top Amazon, eBay and e-commerce sellers in the world.
+- [The My Wife Quit Her Job Podcast](https://mywifequitherjob.com/category/podcast/) - Hosted by Steve Chou. An interview based show where Steve brings in small business entrepreneurs who are killing it online. All of the entrepreneurs on the show bootstrapped their businesses and started their own ventures to improve their lifestyle in some way.
 
-## Another Section
+---
 
-### Subsection
+## Blogs
 
-- [List item](http://example.com)
-- [List item](http://example.com)
+- [JumpSend](https://www.jumpsend.com/blog/)
+- [JungleScout](https://www.junglescout.com/blog/)
+- [SellerEngine](https://sellerengine.com/blog/)
+- [SellerLabs](https://www.sellerlabs.com/blog/)
+- [Sellics](https://sellics.com/blog)
+- [Selling Family](https://thesellingfamily.com/blog/)
+- [Tamebay](https://tamebay.com/)
+- [WebRetailer](https://www.webretailer.com/)
 
+---
 
 ## Contribute
 
-Contributions welcome! Read the [contribution guidelines](contributing.md) first.
+Contributions welcome!
 
+Read the [contribution guidelines](contributing.md) first.
 
 ## License
 
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
+[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
 
-To the extent possible under law, Scale Leap has waived all copyright and
-related or neighboring rights to this work.
+To the extent possible under law, Scale Leap has waived all copyright and related or neighboring rights to this work.
