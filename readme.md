@@ -38,8 +38,6 @@
 - [WordTree](https://www.wordtree.io/) - keyword tools to grow your search traffic, research your competitors, and monitor your niche.
 - [xSellco](https://www.xsellco.com/) - centralize customer queries, target positive feedback by requesting reviews from happy customers, automatically reprice.
 
----
-
 ## Podcasts
 
 - [AM/PM Podcast](https://www.ampmpodcast.com/) - Hosted by Manny Coats (Helium 10). Amazon selling tips for sellers at any step of the Amazon seller journey. From best-in-class interviews with six and seven figure Amazon sellers to instructional how-to education.
@@ -51,8 +49,6 @@
 - [Private Label Movement](https://privatelabelmovement.com/) - Hosted by Kevin Rizer. No-nonsense down to earth feel, and for Kevin’s intriguing and unconventional interview style, the podcast publishes two new episodes each week.
 - [The Ecommerce Momentum](https://ecommercemomentum.com/) - Hosted by Stephen Peterson. Interviews with the top Amazon, eBay and e-commerce sellers in the world.
 - [The My Wife Quit Her Job Podcast](https://mywifequitherjob.com/category/podcast/) - Hosted by Steve Chou. An interview based show where Steve brings in small business entrepreneurs who are killing it online. All of the entrepreneurs on the show bootstrapped their businesses and started their own ventures to improve their lifestyle in some way.
-
----
 
 ## Blogs
 
