@@ -12,6 +12,7 @@
 
 ## Software and Tools
 
+- [AiHello](https://www.aihello.com/) - Location sales forecasting and enabling global selling via Amazon, feedback software and email autoresponder, inventory forecasting.
 - [Amzmailer](https://amzmailer.com/) - feedback software and email autoresponder to send Amazon customers automated emails.
 - [ASINspector](asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
 - [BQool](https://www.bqool.com/) - scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
