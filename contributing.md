@@ -6,7 +6,7 @@ project you agree to abide by its terms.
 
 ---
 
-## How to submit a resource?
+## How to contribute a resource?
 
 ### Pull request
 
