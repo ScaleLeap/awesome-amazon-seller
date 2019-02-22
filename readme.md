@@ -2,7 +2,7 @@
 
 > A curated list of tools and resources for Amazon sellers.
 
-## Table of Contents
+## Contents
 
 - [Software and Tools](#software-and-tools)
 - [Podcasts](#podcasts)
