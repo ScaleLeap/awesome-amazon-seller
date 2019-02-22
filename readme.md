@@ -7,6 +7,7 @@
 - [Software and Tools](#software-and-tools)
 - [Podcasts](#podcasts)
 - [Blogs](#blogs)
+- [Other](#other)
 
 ---
 
