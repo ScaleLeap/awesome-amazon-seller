@@ -13,7 +13,7 @@
 ## Software and Tools
 
 - [Amzmailer](https://amzmailer.com/) - Feedback software and email autoresponder to send Amazon customers automated emails.
-- [ASINspector](asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
+- [ASINspector](https://asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
 - [BQool](https://www.bqool.com/) - Scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
 - [CashCowPro](https://www.cashcowpro.com/) - Sales data, keyword tracking, feedback collection, inventory monitoring, price split testing.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
