@@ -1,0 +1,23 @@
+{
+  "name": "awesome-amazon-seller",
+  "version": "1.0.0",
+  "description": "A curated list of tools and resources for Amazon sellers.",
+  "private": true,
+  "scripts": {
+    "test": "awesome-lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScaleLeap/awesome-amazon-seller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScaleLeap/awesome-amazon-seller/issues"
+  },
+  "homepage": "https://github.com/ScaleLeap/awesome-amazon-seller#readme",
+  "devDependencies": {
+    "awesome-lint": "*"
+  }
+}
