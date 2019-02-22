@@ -12,6 +12,8 @@
 
 ## Software and Tools
 
+
+- [aShop](https://ashop.co) - Effortless microsites for Amazon Sellers.
 - [Amzmailer](https://amzmailer.com/) - Feedback software and email autoresponder to send Amazon customers automated emails.
 - [ASINspector](https://asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
 - [BQool](https://www.bqool.com/) - Scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
@@ -60,6 +62,10 @@
 - [Selling Family](https://thesellingfamily.com/blog/)
 - [Tamebay](https://tamebay.com/)
 - [WebRetailer](https://www.webretailer.com/)
+
+## Other
+- [fbacatalog.com](https://fbacatalog.com)
+- [fbamonthly.com](https://fbamonthly.com)
 
 ---
 
