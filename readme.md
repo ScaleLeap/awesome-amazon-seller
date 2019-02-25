@@ -7,11 +7,13 @@
 - [Software and Tools](#software-and-tools)
 - [Podcasts](#podcasts)
 - [Blogs](#blogs)
+- [Other](#other)
 
 ---
 
 ## Software and Tools
 
+- [aShop](https://ashop.co) - Effortless microsites for Amazon Sellers. Marketing tool that delivers branded store experience to bring more business and maximize profits. 
 - [Amzmailer](https://amzmailer.com/) - Feedback software and email autoresponder to send Amazon customers automated emails.
 - [ASINspector](https://asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
 - [BQool](https://www.bqool.com/) - Scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
@@ -60,6 +62,10 @@
 - [Selling Family](https://thesellingfamily.com/blog/)
 - [Tamebay](https://tamebay.com/)
 - [WebRetailer](https://www.webretailer.com/)
+
+## Other
+- [fbacatalog.com](https://fbacatalog.com) - Software catalog for Amazon Sellers. Find tools that fit your business in no time!
+- [fbamonthly.com](https://fbamonthly.com) - FBA Monthly newsletter is an across-the-board summary of the month's most important news articles and blog posts regarding Amazon businesses.
 
 ---
 
