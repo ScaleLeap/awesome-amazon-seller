@@ -54,16 +54,16 @@
 
 ## Blogs
 
-- [JumpSend](https://www.jumpsend.com/blog/)
-- [JungleScout](https://www.junglescout.com/blog/)
-- [SellerEngine](https://sellerengine.com/blog/)
-- [SellerLabs](https://www.sellerlabs.com/blog/)
-- [Sellics](https://sellics.com/blog)
-- [Selling Family](https://thesellingfamily.com/blog/)
-- [Tamebay](https://tamebay.com/)
-- [WebRetailer](https://www.webretailer.com/)
+- [JumpSend](https://www.jumpsend.com/blog/) - Authored by Greg Mercer and Adam Zlotnik. Tips for sellers on how to increase reviews and listing optimization.
+- [JungleScout](https://www.junglescout.com/blog/) - The most recent Amazon seller resources in the universe. Stay up to date and ahead of the competition with the latest Amazon strategies.
+- [SellerEngine](https://sellerengine.com/blog/) - A blog with regular updates with an awesome Amazon Account Holder Digest series.
+- [SellerLabs](https://www.sellerlabs.com/blog/) - A blog from SellerLabs with awesome ICYMI: Amazon Seller News series.
+- [Sellics](https://sellics.com/blog) - Sellics provides strategic advice for sellers.
+- [Tamebay](https://tamebay.com/) - Tamebay is the leading provider of intelligence & news for all businesses and business people who ply their trade on online marketplaces, whether they are experienced powersellers looking to boost sales, or beginners seeking advice and best practice.
+- [WebRetailer](https://www.webretailer.com/) - WebRetailer is a treasure trove of information for sellers and one of the leading resources on the web.
 
 ## Other
+
 - [FBA Catalog](https://fbacatalog.com) - Software catalog for Amazon Sellers. Find tools that fit your business in no time!
 - [FBA Monthly](https://fbamonthly.com) - FBA Monthly newsletter is an across-the-board summary of the month's most important news articles and blog posts regarding Amazon businesses.
 
