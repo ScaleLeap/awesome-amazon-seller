@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/ScaleLeap/awesome-amazon-seller#readme",
   "devDependencies": {
-    "awesome-lint": "*"
+    "awesome-lint": "0.12.1"
   }
 }
