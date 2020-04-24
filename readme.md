@@ -48,7 +48,6 @@
 - [EcomCrew Podcast](https://www.ecomcrew.com/ecomcrew-podcast/) - Real world e-commerce experience without any online marketing fluff!
 - [Follow The Data](https://viral-launch.com/follow-the-data-amazon-fba-seller-podcast.html) - Hosted by Cameron Yoder (Viral Launch). The goal of this podcast is to help you successfully dive deeper into your own Amazon seller journey, using data as the anchor through that journey.
 - [Keyword: The Amazon Insider Podcast](http://keywordpodcast.com/) - Hosted by Kate Valentine. Delivers authoritative content exclusively from former and current Amazon employees.
-- [Private Label Movement](https://privatelabelmovement.com/) - Hosted by Kevin Rizer. No-nonsense down to earth feel, and for Kevin’s intriguing and unconventional interview style, the podcast publishes two new episodes each week.
 - [The Ecommerce Momentum](https://ecommercemomentum.com/) - Hosted by Stephen Peterson. Interviews with the top Amazon, eBay and e-commerce sellers in the world.
 - [The My Wife Quit Her Job Podcast](https://mywifequitherjob.com/category/podcast/) - Hosted by Steve Chou. An interview based show where Steve brings in small business entrepreneurs who are killing it online. All of the entrepreneurs on the show bootstrapped their businesses and started their own ventures to improve their lifestyle in some way.
 
