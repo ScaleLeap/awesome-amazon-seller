@@ -20,6 +20,7 @@
 - [ASINspector](https://asinspector.com/) - Sales trend data, unique product ideas, mobile scanner, best-seller rankings.
 - [BQool](https://www.bqool.com/) - Scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
 - [CashCowPro](https://www.cashcowpro.com/) - Sales data, keyword tracking, feedback collection, inventory monitoring, price split testing.
+- [DataHawk](https://www.datahawk.co/) - An end-to-end platform, with full data control, intuitive dashboards and AI-powered guidance and automation.
 - [Eva](https://eva.guru/) - Connects the most important aspects of your Amazon business into a single intuitive dashboard - price management, replenishments, reimbursements, analytics.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
 - [Feedbackwhiz](https://www.feedbackwhiz.com/) - Software for merchants to boost their Amazon business, repair feedback, improve product reviews, and automate high-volume emails.
