@@ -50,6 +50,7 @@
 - [Skubana](https://www.skubana.com/) - Powers orders, inventory and business intelligence for the world's top high-volume brands and retailers.
 - [Sonar](http://sonar-tool.com/) - Free Amazon keyword research tool from Sellics.
 - [Splitly](https://splitly.com/) - Algorithmic split testing, automated pricing optimization, keyword rank tracking.
+- [Scout](https://scout-phi-ashen.vercel.app) - Product sourcing decision tool that weighs demand against the review barrier on the top sellers and returns a go/wait/no-go, with notes on where the leaders are weak.
 - [TradeGecko](https://www.tradegecko.com/) - Cloud based inventory and order management software for modern online businesses.
 - [Turbo Piranha](https://www.turbopiranha.com/) - Bulk product search, profit calculation and competition analysis software using UPC, ISBN, EAN and ASIN lists in Excel/CSV/TXT format for wholesale and arbitrage business models, and also book sellers/flippers.
 - [WordTree](https://www.wordtree.io/) - Keyword tools to grow your search traffic, research your competitors, and monitor your niche.
