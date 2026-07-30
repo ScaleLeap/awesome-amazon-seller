@@ -57,6 +57,7 @@
 - [Turbo Piranha](https://www.turbopiranha.com/) - Bulk product search, profit calculation and competition analysis software using UPC, ISBN, EAN and ASIN lists in Excel/CSV/TXT format for wholesale and arbitrage business models, and also book sellers/flippers.
 - [WordTree](https://www.wordtree.io/) - Keyword tools to grow your search traffic, research your competitors, and monitor your niche.
 - [xSellco](https://www.xsellco.com/) - Centralize customer queries, target positive feedback by requesting reviews from happy customers, automatically reprice.
+- [Trends MCP](https://trendsmcp.ai) - Amazon / shopping / TikTok trend signals via API or MCP. Free tier.
 
 ## Product Research and Pre-Launch
 
