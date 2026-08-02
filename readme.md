@@ -35,6 +35,7 @@
 - [Forecastly](https://www.forecast.ly/) - Predict future product demand, make fast and accurate buying decisions.
 - [ForecastRx](https://www.forecastrx.com/) - Inventory forecasting solution. Projects future demand so you can purchase the right product, in the right quantity, at the right time.
 - [Helium10](https://www.helium10.com/) - Software suite contains over a dozen tools that help find high ranking keywords, identify trends, monitor competitors, and fully optimize product listings to increase sales.
+- [ListingAI](https://lijustin655.github.io/f1-listingai/) - Free AI listing generator for Amazon & TikTok Shop sellers. Creates optimized title, 5 bullet points, and product description in 30 seconds. No signup required.
 - [igly.ai](https://igly.ai/) - Free AI image editor with 12+ tools for e-commerce product photos. Background removal, image generation, inpainting, upscaling, and virtual try-on. Browser-based, no signup required.
 - [HelloProfit](https://helloprofit.com/) - Lets you view all your sales & profit data from different merchant accounts from one dashboard.
 - [Inventory Hero](https://www.inventoryhero.ai) - Automated inventory management for Amazon FBA that forecasts demand, drafts restocks, and works inside Claude via MCP.
