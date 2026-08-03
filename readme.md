@@ -1,4 +1,5 @@
 # Awesome Amazon Seller [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+- [ReviewPilot](https://lijustin655.github.io/review-pilot/) - Free AI review analysis for e-commerce sellers. Paste product reviews, get top complaint reasons, sentiment breakdown, and improvement actions in 30 seconds.
 
 > A curated list of tools and resources for Amazon sellers.
 
