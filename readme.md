@@ -42,6 +42,7 @@
 - [Keyword Tool](https://keywordtool.io/amazon) - Finds great keywords using Amazon autocomplete.
 - [MerchantWords](https://www.merchantwords.com/) - Finds highly specific keyword phrases that help buyers find what you are selling.
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
+- [PixGT](https://pixgt.cn) - AI product imagery for listings. Generates scene photos from a plain white-background shot, and also handles clothing try-on, model swapping, accessory try-on and pose variations. Free credits on signup.
 - [Prestozon](https://prestozon.com/) - Automation and analytics for Amazon HSA & sponsored products ads.
 - [Prisync](https://prisync.com/) - Price monitoring & tracking SaaS with dynamic pricing and automatching engine.
 - [Scrappie](https://scrappie.app) - E-commerce data monitoring and analysis platform with API integration, WebHooks & ETL processes.
