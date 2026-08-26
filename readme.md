@@ -54,6 +54,7 @@
 - [Sonar](http://sonar-tool.com/) - Free Amazon keyword research tool from Sellics.
 - [Splitly](https://splitly.com/) - Algorithmic split testing, automated pricing optimization, keyword rank tracking.
 - [TradeGecko](https://www.tradegecko.com/) - Cloud based inventory and order management software for modern online businesses.
+- [Toolkit Labs Invoice](https://ytinumoc.github.io/toolkitlabs-invoice/) - Free browser invoice and receipt PDF generator, no account. [Commercial EUR 249 one-time](https://buy.stripe.com/bJeeVea187TScZwb095Ne0k?client_reference_id=awesome-amazon-seller-v1): white-label PDFs, 6 templates, CSV batch CLI.
 - [Turbo Piranha](https://www.turbopiranha.com/) - Bulk product search, profit calculation and competition analysis software using UPC, ISBN, EAN and ASIN lists in Excel/CSV/TXT format for wholesale and arbitrage business models, and also book sellers/flippers.
 - [WordTree](https://www.wordtree.io/) - Keyword tools to grow your search traffic, research your competitors, and monitor your niche.
 - [xSellco](https://www.xsellco.com/) - Centralize customer queries, target positive feedback by requesting reviews from happy customers, automatically reprice.
