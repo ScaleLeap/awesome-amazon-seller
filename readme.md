@@ -28,6 +28,7 @@
 - [Calcmatic](https://calcmatic.app) - Free profit calculator for Amazon FBA/FBM with full fee breakdown with graphs.
 - [Calcrux FBA Profit Calculator](https://calcrux.com/tools/ecommerce/amazon-fba-profit-calculator) - Free multi-marketplace FBA profit + fee breakdown calculator. Covers inbound placement fees. No sign-up required.
 - [CashCowPro](https://www.cashcowpro.com/) - Sales data, keyword tracking, feedback collection, inventory monitoring, price split testing.
+- [Costback](https://getcostback.com/calculator) - Free calculator that reads a seller's own FBA Reimbursements report to estimate reimbursements owed, updated for Amazon's 2025 manufacturing-cost policy. No login or account access.
 - [DataHawk](https://www.datahawk.co/) - An end-to-end platform, with full data control, intuitive dashboards and AI-powered guidance and automation.
 - [Eva](https://eva.guru/) - Connects the most important aspects of your Amazon business into a single intuitive dashboard - price management, replenishments, reimbursements, analytics.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
