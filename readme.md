@@ -48,6 +48,7 @@
 - [Prisync](https://prisync.com/) - Price monitoring & tracking SaaS with dynamic pricing and automatching engine.
 - [Scrappie](https://scrappie.app) - E-commerce data monitoring and analysis platform with API integration, WebHooks & ETL processes.
 - [SellerApp](https://www.sellerapp.com/) - Product research, product ideas, listing quality, product alerts, product source, keyword research, ppc analyzer, and more.
+- [SellerBlaze](https://sellerblaze.com) - Amazon profit analytics reconciled from actual settlement reports rather than estimated from the published fee schedule, with Sponsored Products bid automation capped at break-even CPC. Includes a free, no-signup [Amazon India fee and profit calculator](https://sellerblaze.com/calculators/amazon-india-fee-calculator) covering referral, closing and weight-handling fees plus GST and TCS.
 - [Seller Calculators](https://sellercalculators.com) - Free Amazon fee and profit margin decision tools for multi-channel sellers.
 - [SellerEngine.app](https://sellerengine.app) - EU-hosted operations dashboard for multi-marketplace Amazon sellers; combines PPC, repricing, inventory forecasting, VAT/OSS and listing checks in one daily view.
 - [SellerLabs](https://www.sellerlabs.com/tools/) - Several tools to manage ads, discover profitable keywords and products, get more product reviews and better seller feedback, simplify inventory and financial management for the amazon marketplace.
