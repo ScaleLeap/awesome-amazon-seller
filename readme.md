@@ -60,6 +60,7 @@
 - [Turbo Piranha](https://www.turbopiranha.com/) - Bulk product search, profit calculation and competition analysis software using UPC, ISBN, EAN and ASIN lists in Excel/CSV/TXT format for wholesale and arbitrage business models, and also book sellers/flippers.
 - [WordTree](https://www.wordtree.io/) - Keyword tools to grow your search traffic, research your competitors, and monitor your niche.
 - [xSellco](https://www.xsellco.com/) - Centralize customer queries, target positive feedback by requesting reviews from happy customers, automatically reprice.
+- [FlipWorth](https://flipworth.silentdirectivellc.com/?utm_source=awesome-amazon-seller&utm_medium=resource-directory) - Photo-based resale price check for retail arbitrage and thrift sourcing: snap an item to get an estimated resale range, a buy or pass verdict and a suggested list price before you buy inventory. Free to try in the browser, also on iPhone.
 
 ## Product Research and Pre-Launch
 
