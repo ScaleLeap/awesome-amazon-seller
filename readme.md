@@ -16,6 +16,7 @@
 - [Flapen](https://flapen.com) - Flapen is a free real-time dashboard to monitor Amazon category changes in 19 country and 215 categories
 - [Acalcia](https://acalcia.com) - Free, no-signup browser suite of seller calculators including an Amazon FBA fee and profit calculator, plus pricing, margin, and break-even tools. No login or paywall.
 - [ListCraft HQ](https://listcrafthq.com) - Free, no-signup suite of calculators for sellers covering profit margin, markup, break-even, ROAS, CAC, and LTV. No login or paywall.
+- [AdsTurbo](https://adsturbo.ai) - AI video ad generator: turn an Amazon product link into short video ads with AI UGC actors, translate into 35+ languages. Free plan.
 - [Advigator](https://www.advigator.com) - Amazon Advertising Software
 - [ListingPic](https://listingpic.com/amazon-product-image-checker/) - Free browser-based tool for checking Amazon product images and marketplace listing thumbnails before publishing.
 - [AiHello AutoPilot](https://www.aihello.com/) - Amazon PPC Ads Automation Software.
