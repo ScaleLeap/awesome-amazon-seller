@@ -42,6 +42,7 @@
 - [HelloProfit](https://helloprofit.com/) - Lets you view all your sales & profit data from different merchant accounts from one dashboard.
 - [Inventory Hero](https://www.inventoryhero.ai) - Automated inventory management for Amazon FBA that forecasts demand, drafts restocks, and works inside Claude via MCP.
 - [Jungle Scout](https://www.junglescout.com/) - Track and compare key product metrics, database allows you to filter products across multiple categories by demand, price, estimated sales, rating, seasonality, dimensions and more, find out which products sell and which niches have high opportunity.
+- [kdpbook.io](https://kdpbook.io) - AI book studio for Amazon KDP publishers: turns a book idea or manuscript into the print interior PDF, full-wrap cover PDF, Kindle eBook and a listing sheet (title, description, 7 keywords, categories). Free KDP spine width, cover size, printing cost and royalty calculators, no signup.
 - [Keyword Tool](https://keywordtool.io/amazon) - Finds great keywords using Amazon autocomplete.
 - [MerchantWords](https://www.merchantwords.com/) - Finds highly specific keyword phrases that help buyers find what you are selling.
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
