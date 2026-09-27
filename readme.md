@@ -44,6 +44,7 @@
 - [Jungle Scout](https://www.junglescout.com/) - Track and compare key product metrics, database allows you to filter products across multiple categories by demand, price, estimated sales, rating, seasonality, dimensions and more, find out which products sell and which niches have high opportunity.
 - [Keyword Tool](https://keywordtool.io/amazon) - Finds great keywords using Amazon autocomplete.
 - [MerchantWords](https://www.merchantwords.com/) - Finds highly specific keyword phrases that help buyers find what you are selling.
+- [Orkas](https://orkas.ai/ai-agent-for-amazon-sellers/?source=gh_awseller) - Open-source, local-first desktop AI team for Amazon sellers. Commander coordinates specialist agents to review seller-provided exports and draft listing copy, images, and videos. Supports own model providers or Orkas-hosted models.
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
 - [Pangolinfo](https://www.pangolinfo.com/amazon-data-mcp/) - MCP server and REST API exposing 19 read-only Amazon data tools: product details, reviews, keyword search, category and niche analysis, Best Sellers, New Releases, and seller storefronts, plus WIPO trademark and US PACER patent litigation lookups. Connects over Streamable HTTP; Python client available via `pip install pangolinfo-mcp`.
 - [Prestozon](https://prestozon.com/) - Automation and analytics for Amazon HSA & sponsored products ads.
