@@ -19,6 +19,7 @@
 - [AdsTurbo](https://adsturbo.ai) - AI video ad generator: turn an Amazon product link into short video ads with AI UGC actors, translate into 35+ languages. Free plan.
 - [Advigator](https://www.advigator.com) - Amazon Advertising Software
 - [ListingPic](https://listingpic.com/amazon-product-image-checker/) - Free browser-based tool for checking Amazon product images and marketplace listing thumbnails before publishing.
+- [CompressFile.pro](https://compressfile.pro/reduce-image-size-for-amazon/) - Image Resizer. Free, no-signup browser tool that resizes and compresses product photos to Amazon's 2,000×2,000 spec. Images never leave your device.
 - [AiHello AutoPilot](https://www.aihello.com/) - Amazon PPC Ads Automation Software.
 - [Amazon Scraper API](https://amazonscraperapi.com) - Production REST API for Amazon product, search, and batch ASIN data across 20 marketplaces. Residential proxies and TLS impersonation handled server-side. 1000 free requests on signup.
 - [Amzmailer](https://amzmailer.com/) - Feedback software and email autoresponder to send Amazon customers automated emails.
