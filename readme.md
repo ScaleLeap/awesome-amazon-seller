@@ -68,6 +68,7 @@
 
 - [Amazon Product Opportunity Explorer](https://sell.amazon.com/tools/product-opportunity-explorer) - Official Amazon tool for exploring product opportunity niches and reviewing demand, competition, and search trends.
 - [Amazon Revenue Calculator](https://sell.amazon.com/tools) - Official Amazon tool for estimating selling fees, fulfillment costs, and revenue by fulfillment method.
+- [Clothing HS Codes by Garment](https://www.hlnapparel.com/tools/hs-codes) - Free reference of HS codes for common garments by product type (e.g. 6109 T-shirts, 6110 sweatshirts and pullovers, 6203 trousers, 6505 hats), published by a clothing manufacturer.
 - [CPSC Regulatory Robot](https://www.cpsc.gov/Business--Manufacturing/Regulatory-Robot/Safer-Products-Start-Here) - U.S. Consumer Product Safety Commission tool that helps identify basic consumer product safety requirements.
 - [Ryndix Amazon category data](https://github.com/Ryndix/ryndix-category-data) - Free CC BY 4.0 dataset of Amazon US category snapshots: units, price bands, review distribution, cost per click, fee load and pre-advertising unit economics for five categories.
 - [USPTO Patent Public Search](https://www.uspto.gov/patents/search/patent-public-search) - Official USPTO search tool for U.S. patents and patent application publications.
