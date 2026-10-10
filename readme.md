@@ -55,6 +55,7 @@
 - [SellerEngine.app](https://sellerengine.app) - EU-hosted operations dashboard for multi-marketplace Amazon sellers; combines PPC, repricing, inventory forecasting, VAT/OSS and listing checks in one daily view.
 - [SellerLabs](https://www.sellerlabs.com/tools/) - Several tools to manage ads, discover profitable keywords and products, get more product reviews and better seller feedback, simplify inventory and financial management for the amazon marketplace.
 - [SellerLegend](https://sellerlegend.com/) - Near real-time orders download, intelligent KPI dashboards, inventory management, notifications, refunds, historical cost of goods, operating expenses, all America & Europe marketplaces, financial transactions, Europe vat.
+- [SellerUtility FBA Calculator](https://www.sellerutility.com/resources/amazon-fba-calculator) - Free Amazon FBA calculator: referral fee, FBA fee by size tier, ad cost and your own costs itemised, with profit, margin, ROI and break-even price. No sign-up.
 - [Sellics](https://sellics.com) - Combines everything you need to manage and grow your Amazon business in one integrated software. Features that work together to help you become more successful on Amazon.
 - [Skubana](https://www.skubana.com/) - Powers orders, inventory and business intelligence for the world's top high-volume brands and retailers.
 - [Sonar](http://sonar-tool.com/) - Free Amazon keyword research tool from Sellics.
