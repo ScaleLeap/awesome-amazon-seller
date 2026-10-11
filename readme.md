@@ -43,6 +43,7 @@
 - [Inventory Hero](https://www.inventoryhero.ai) - Automated inventory management for Amazon FBA that forecasts demand, drafts restocks, and works inside Claude via MCP.
 - [Jungle Scout](https://www.junglescout.com/) - Track and compare key product metrics, database allows you to filter products across multiple categories by demand, price, estimated sales, rating, seasonality, dimensions and more, find out which products sell and which niches have high opportunity.
 - [Keyword Tool](https://keywordtool.io/amazon) - Finds great keywords using Amazon autocomplete.
+- [Listimo](https://listimo.ai/en/) - AI listing checker (score 0-100) and generator for Amazon titles, bullet points, A+ content, listing images and video from one product photo. Free daily check without signup; credits instead of a subscription.
 - [MerchantWords](https://www.merchantwords.com/) - Finds highly specific keyword phrases that help buyers find what you are selling.
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
 - [Pangolinfo](https://www.pangolinfo.com/amazon-data-mcp/) - MCP server and REST API exposing 19 read-only Amazon data tools: product details, reviews, keyword search, category and niche analysis, Best Sellers, New Releases, and seller storefronts, plus WIPO trademark and US PACER patent litigation lookups. Connects over Streamable HTTP; Python client available via `pip install pangolinfo-mcp`.
