@@ -20,6 +20,7 @@
 - [Advigator](https://www.advigator.com) - Amazon Advertising Software
 - [ListingPic](https://listingpic.com/amazon-product-image-checker/) - Free browser-based tool for checking Amazon product images and marketplace listing thumbnails before publishing.
 - [AiHello AutoPilot](https://www.aihello.com/) - Amazon PPC Ads Automation Software.
+- [Amazon Bestsellers Tracker](https://github.com/huynhtanan/amazon-bestsellers-tracker) - Open-source Python + SQLite tracker that snapshots Amazon Best Sellers across 17 country stores daily. Includes SQL diff queries for rank jumps and new entries, and an ETL pipeline using the Apify platform.
 - [Amazon Scraper API](https://amazonscraperapi.com) - Production REST API for Amazon product, search, and batch ASIN data across 20 marketplaces. Residential proxies and TLS impersonation handled server-side. 1000 free requests on signup.
 - [Amzmailer](https://amzmailer.com/) - Feedback software and email autoresponder to send Amazon customers automated emails.
 - - [amztool](https://amztool.me) - Open-web Sponsored Products bulk-sheet generator. Reusable keyword dictionaries, one-click ad-group cloning, exports upload-ready .xlsx. Free tier. Companion [open spec](https://github.com/lizhl6/amazon-sp-bulk-sheet-spec) describes the schema.
