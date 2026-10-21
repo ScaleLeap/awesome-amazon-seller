@@ -38,6 +38,7 @@
 - [Feedbackz](https://www.feedbackz.com/) - Built for marketing savvy Amazon sellers seeking more beautiful and more powerfully targeted automatic follow-up email funnels.
 - [Forecastly](https://www.forecast.ly/) - Predict future product demand, make fast and accurate buying decisions.
 - [ForecastRx](https://www.forecastrx.com/) - Inventory forecasting solution. Projects future demand so you can purchase the right product, in the right quantity, at the right time.
+- [GoUndetected](https://goundetected.io) - Antidetect multi-profile browser for Windows and macOS with dedicated static ISP proxies, so each brand or client store runs in its own isolated browser profile with a stable IP. Team roles and API. From $6/month.
 - [Helium10](https://www.helium10.com/) - Software suite contains over a dozen tools that help find high ranking keywords, identify trends, monitor competitors, and fully optimize product listings to increase sales.
 - [igly.ai](https://igly.ai/) - Free AI image editor with 12+ tools for e-commerce product photos. Background removal, image generation, inpainting, upscaling, and virtual try-on. Browser-based, no signup required.
 - [HelloProfit](https://helloprofit.com/) - Lets you view all your sales & profit data from different merchant accounts from one dashboard.
