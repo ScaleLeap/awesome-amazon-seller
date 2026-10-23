@@ -50,6 +50,7 @@
 - [Pangolinfo](https://www.pangolinfo.com/amazon-data-mcp/) - MCP server and REST API exposing 19 read-only Amazon data tools: product details, reviews, keyword search, category and niche analysis, Best Sellers, New Releases, and seller storefronts, plus WIPO trademark and US PACER patent litigation lookups. Connects over Streamable HTTP; Python client available via `pip install pangolinfo-mcp`.
 - [Prestozon](https://prestozon.com/) - Automation and analytics for Amazon HSA & sponsored products ads.
 - [Prisync](https://prisync.com/) - Price monitoring & tracking SaaS with dynamic pricing and automatching engine.
+- [RefVid](https://refvid.com) - AI product video generator that keeps label, logo and packaging consistent across clips, from 1-5 photos or an Amazon product link. Free credits on sign-up.
 - [Scrappie](https://scrappie.app) - E-commerce data monitoring and analysis platform with API integration, WebHooks & ETL processes.
 - [Sellantica](https://sellantica.ai) - Amazon PPC automation for sellers and agencies: one-click campaign structures, keyword harvesting from auto campaigns, bid optimization with explainable reasoning, and per-product P&L. EU-hosted.
 - [SellerApp](https://www.sellerapp.com/) - Product research, product ideas, listing quality, product alerts, product source, keyword research, ppc analyzer, and more.
