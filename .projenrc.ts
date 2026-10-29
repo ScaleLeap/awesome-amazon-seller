@@ -5,6 +5,7 @@ import { AwesomeList } from "./projenrc/awesome-list.ts";
 import { Category } from "./projenrc/category.ts";
 import { Entry } from "./projenrc/entry.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
+import { PrLinksWorkflow } from "./projenrc/github/pr-links-workflow.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
 import { ListValidator } from "./projenrc/list-validator.ts";
@@ -114,9 +115,15 @@ projenrc.tsconfig.addExtends(tsconfig);
 project.testTask.exec("vitest run");
 
 /**
- * Folder with one subfolder for each category, and one file for each entry.
+ * Folder with one subfolder for each category, and one file for each entry, relative to the
+ * project root.
  */
-const ENTRIES_DIR = join(import.meta.dirname, "data", "entries");
+const ENTRIES_PATH = "data/entries";
+
+/**
+ * Absolute path of the entries folder.
+ */
+const ENTRIES_DIR = join(import.meta.dirname, ENTRIES_PATH);
 
 /**
  * Path of the contribution guidelines.
@@ -190,6 +197,10 @@ new build.BuildWorkflow(project, {
     },
     workflowDispatch: {},
   },
+});
+
+new PrLinksWorkflow(gitHub, {
+  entriesPath: ENTRIES_PATH,
 });
 
 new ContributionTemplates(gitHub, {
