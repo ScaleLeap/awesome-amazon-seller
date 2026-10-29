@@ -5,6 +5,6 @@ import type { EntryOptions } from "../../../projenrc/entry.ts";
  */
 export const entry = {
   name: "Keyword: The Amazon Insider Podcast",
-  url: "http://keywordpodcast.com/",
+  url: "https://keywordpodcast.com/",
   description: "Hosted by Kate Valentine. Delivers authoritative content exclusively from former and current Amazon employees.",
 } satisfies EntryOptions;
