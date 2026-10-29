@@ -90,6 +90,11 @@ export class AwesomeList extends Component implements IAwesomeList {
   public readonly contributingFile: string;
 
   /**
+   * The readme file that shows the list.
+   */
+  public readonly readme: ReadmeFile;
+
+  /**
    * Creates the list and its readme file.
    */
   constructor(project: Project, options: AwesomeListOptions) {
@@ -98,8 +103,7 @@ export class AwesomeList extends Component implements IAwesomeList {
     this.title = options.title;
     this.description = options.description;
     this.contributingFile = options.contributingFile;
-
-    new ReadmeFile(this);
+    this.readme = new ReadmeFile(this);
   }
 
   /**
