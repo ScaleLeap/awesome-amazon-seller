@@ -38,6 +38,11 @@ export interface ContributionTemplatesOptions {
    * Branch that pull requests merge into.
    */
   readonly defaultBranch: string;
+
+  /**
+   * Folder of the entry files, relative to the repository root, for example "data/entries".
+   */
+  readonly entriesPath: string;
 }
 
 /**
@@ -50,7 +55,7 @@ export class ContributionTemplates extends Component {
   constructor(gitHub: github.GitHub, options: ContributionTemplatesOptions) {
     super(gitHub.project, "ContributionTemplates");
 
-    const { list, repositoryUrl, defaultBranch } = options;
+    const { list, repositoryUrl, defaultBranch, entriesPath } = options;
 
     /**
      * Full address of the contribution guidelines. A pull request template needs a full address,
@@ -63,7 +68,7 @@ export class ContributionTemplates extends Component {
         "<!-- Tell us why the resource is awesome, and if you work for the company that makes it. -->",
         "",
         `- [ ] I read the [contribution guidelines](${contributingUrl}).`,
-        "- [ ] I added or changed only files in `data/entries/`, and I ran `npx projen`.",
+        `- [ ] I added or changed only files in \`${entriesPath}/\`, and I ran \`npx projen\`.`,
         "- [ ] The description is short and factual, with no marketing text.",
         "- [ ] The URL has no affiliate or tracking parameters.",
       ],

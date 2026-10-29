@@ -207,6 +207,7 @@ new ContributionTemplates(gitHub, {
   list,
   repositoryUrl: REPOSITORY_URL,
   defaultBranch: DEFAULT_BRANCH,
+  entriesPath: ENTRIES_PATH,
 });
 
 project.synth();
