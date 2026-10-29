@@ -5,6 +5,7 @@
     ".github/ISSUE_TEMPLATE/suggest-resource.yml",
     ".github/pull_request_template.md",
     ".github/workflows/build.yml",
+    ".github/workflows/pr-links.yml",
     ".gitignore",
     ".node-version",
     ".projen/deps.json",
