@@ -54,7 +54,10 @@ const nodePackage = new javascript.NodePackage(project, {
 nodePackage.addField("private", true);
 nodePackage.addField("type", "module");
 
-new TextFile(project, ".node-version", {
+/**
+ * File that tells version managers and `actions/setup-node` which Node.js version to use.
+ */
+const nodeVersionFile = new TextFile(project, ".node-version", {
   lines: [
     NODE_VERSION,
   ],
@@ -150,7 +153,9 @@ pinActions(gitHub);
 new build.BuildWorkflow(project, {
   buildTask: project.buildTask,
   runsOn: RUNS_ON,
-  preBuildSteps: installSteps(),
+  preBuildSteps: installSteps({
+    nodeVersionFile,
+  }),
   mutableBuild: false,
   permissions: {
     contents: github.workflows.JobPermission.READ,

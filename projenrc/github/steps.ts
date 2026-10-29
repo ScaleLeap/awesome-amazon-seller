@@ -1,4 +1,4 @@
-import type { github } from "projen";
+import type { FileBase, github } from "projen";
 import { ACTIONS } from "./actions.ts";
 
 /**
@@ -14,9 +14,14 @@ export const RUNS_ON = [
 export const DEFAULT_BRANCH = "master";
 
 /**
- * File that holds the Node.js version of the project.
+ * Options for the steps that install the toolchain and the dependencies.
  */
-const NODE_VERSION_FILE = ".node-version";
+export interface InstallStepsOptions {
+  /**
+   * File that holds the Node.js version of the project.
+   */
+  readonly nodeVersionFile: FileBase;
+}
 
 /**
  * Step that checks out the repository, with no credentials left in the Git config.
@@ -35,7 +40,7 @@ export function checkoutStep(): github.workflows.JobStep {
  * Steps that install Node.js, pnpm and the dependencies. pnpm reads its version from the
  * `packageManager` field of `package.json`.
  */
-export function installSteps(): github.workflows.JobStep[] {
+export function installSteps(options: InstallStepsOptions): github.workflows.JobStep[] {
   return [
     {
       name: "Set up pnpm",
@@ -45,7 +50,7 @@ export function installSteps(): github.workflows.JobStep[] {
       name: "Set up Node.js",
       uses: ACTIONS.setupNode,
       with: {
-        "node-version-file": NODE_VERSION_FILE,
+        "node-version-file": options.nodeVersionFile.path,
         "cache": "pnpm",
       },
     },
@@ -59,9 +64,9 @@ export function installSteps(): github.workflows.JobStep[] {
 /**
  * Steps that check out the repository, then install Node.js, pnpm and the dependencies.
  */
-export function setupSteps(): github.workflows.JobStep[] {
+export function setupSteps(options: InstallStepsOptions): github.workflows.JobStep[] {
   return [
     checkoutStep(),
-    ...installSteps(),
+    ...installSteps(options),
   ];
 }
