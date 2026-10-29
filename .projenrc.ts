@@ -6,13 +6,16 @@ import { Category } from "./projenrc/category.ts";
 import { Entry } from "./projenrc/entry.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
 import { AiTriageWorkflow } from "./projenrc/github/ai-triage-workflow.ts";
+import { DeadLinksWorkflow } from "./projenrc/github/dead-links-workflow.ts";
 import { PrLinksWorkflow } from "./projenrc/github/pr-links-workflow.ts";
 import { FINDINGS_FILE, FINDINGS_FILE_ENV, PrReportWorkflow } from "./projenrc/github/pr-report-workflow.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
 import { ListValidator } from "./projenrc/list-validator.ts";
+import { LINK_GRACE_DAYS, readLinkHealth } from "./projenrc/link-health.ts";
 import { loadEntries } from "./projenrc/load-entries.ts";
 import { DEFAULT_RULES } from "./projenrc/rules/index.ts";
+import { linkHealthRule } from "./projenrc/rules/link-health.ts";
 
 /**
  * Version of pnpm that the project uses.
@@ -123,6 +126,12 @@ project.testTask.exec("vitest run");
 const ENTRIES_PATH = "data/entries";
 
 /**
+ * File of the links that failed the weekly link check, relative to the project root. Only the
+ * dead-link workflow writes it.
+ */
+const LINK_HEALTH_PATH = "data/link-health.json";
+
+/**
  * Absolute path of the entries folder.
  */
 const ENTRIES_DIR = join(import.meta.dirname, ENTRIES_PATH);
@@ -171,7 +180,13 @@ if (entriesByCategory.size > 0) {
 }
 
 new ListValidator(list, {
-  rules: DEFAULT_RULES,
+  rules: [
+    ...DEFAULT_RULES,
+    linkHealthRule({
+      health: readLinkHealth(join(import.meta.dirname, LINK_HEALTH_PATH)),
+      graceDays: LINK_GRACE_DAYS,
+    }),
+  ],
   findingsFile: process.env[FINDINGS_FILE_ENV],
 });
 
@@ -225,6 +240,13 @@ new AiTriageWorkflow(gitHub, {
   list,
   approvers: TRIAGE_APPROVERS,
   entriesPath: ENTRIES_PATH,
+  nodeVersionFile,
+});
+
+new DeadLinksWorkflow(gitHub, {
+  entriesPath: ENTRIES_PATH,
+  linkHealthPath: LINK_HEALTH_PATH,
+  readme: list.readme,
   nodeVersionFile,
 });
 
