@@ -1,5 +1,4 @@
 import { Component, type Project } from "projen";
-import type { IConstruct } from "constructs";
 import { Category, type CategoryOptions, type ICategory } from "./category.ts";
 import type { IEntry } from "./entry.ts";
 import { ReadmeFile } from "./readme-file.ts";
@@ -27,7 +26,7 @@ export interface AwesomeListOptions {
 /**
  * An awesome list: a set of categories, each with its entries.
  */
-export interface IAwesomeList extends IConstruct {
+export interface IAwesomeList {
   /**
    * Title of the list.
    */

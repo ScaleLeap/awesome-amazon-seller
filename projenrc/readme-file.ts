@@ -1,3 +1,4 @@
+import type { IConstruct } from "constructs";
 import { FileBase } from "projen";
 import type { IAwesomeList } from "./awesome-list.ts";
 import type { IEntry } from "./entry.ts";
@@ -72,7 +73,7 @@ export class ReadmeFile extends FileBase {
   /**
    * Creates the readme file of a list.
    */
-  constructor(list: IAwesomeList) {
+  constructor(list: IAwesomeList & IConstruct) {
     super(list, README_PATH);
 
     this.list = list;

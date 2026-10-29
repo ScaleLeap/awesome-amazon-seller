@@ -48,7 +48,7 @@ export interface EntryOptions {
 /**
  * A resource in a category of the list.
  */
-export interface IEntry extends IConstruct {
+export interface IEntry {
   /**
    * The category that holds this entry.
    */
@@ -120,7 +120,7 @@ export class Entry extends Component implements IEntry {
   /**
    * Creates an entry in a category. Use `ICategory.addEntry()` in place of this constructor.
    */
-  constructor(category: ICategory, options: EntryOptions) {
+  constructor(category: ICategory & IConstruct, options: EntryOptions) {
     const slug = slugify(options.name);
     super(category, slug);
 

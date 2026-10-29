@@ -21,7 +21,7 @@ export interface CategoryOptions {
 /**
  * A section of the list that holds the entries of one kind of resource.
  */
-export interface ICategory extends IConstruct {
+export interface ICategory {
   /**
    * The list that holds this category.
    */
@@ -70,7 +70,7 @@ export class Category extends Component implements ICategory {
   /**
    * Creates a category in a list. Use `IAwesomeList.addCategory()` in place of this constructor.
    */
-  constructor(list: IAwesomeList, options: CategoryOptions) {
+  constructor(list: IAwesomeList & IConstruct, options: CategoryOptions) {
     super(list, options.id);
 
     this.list = list;
