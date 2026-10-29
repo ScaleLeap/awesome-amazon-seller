@@ -2,6 +2,7 @@ import { readdirSync } from "node:fs";
 import { basename, join, relative } from "node:path";
 import { pathToFileURL } from "node:url";
 import type { EntryLink, EntryOptions } from "./entry.ts";
+import { isRecord } from "./guards.ts";
 import { slugify } from "./slug.ts";
 
 /**
@@ -27,13 +28,6 @@ export interface LoadedEntry {
    * The options that the file exports.
    */
   readonly options: EntryOptions;
-}
-
-/**
- * Tells if a value is a plain object.
- */
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === "object" && value !== null;
 }
 
 /**
