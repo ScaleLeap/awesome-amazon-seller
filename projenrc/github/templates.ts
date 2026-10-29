@@ -20,21 +20,49 @@ const RELATION_OPTIONS = [
 ];
 
 /**
+ * Options for the contribution templates.
+ */
+export interface ContributionTemplatesOptions {
+  /**
+   * The list that contributors add entries to. The category dropdown of the issue form shows
+   * its categories.
+   */
+  readonly list: IAwesomeList;
+
+  /**
+   * Web address of the GitHub repository, for example "https://github.com/owner/repo".
+   */
+  readonly repositoryUrl: string;
+
+  /**
+   * Branch that pull requests merge into.
+   */
+  readonly defaultBranch: string;
+}
+
+/**
  * The pull request template and the issue forms that guide contributors.
  */
 export class ContributionTemplates extends Component {
   /**
-   * Creates the templates. The category dropdown of the issue form shows the categories of
-   * the list.
+   * Creates the templates.
    */
-  constructor(gitHub: github.GitHub, list: IAwesomeList) {
+  constructor(gitHub: github.GitHub, options: ContributionTemplatesOptions) {
     super(gitHub.project, "ContributionTemplates");
+
+    const { list, repositoryUrl, defaultBranch } = options;
+
+    /**
+     * Full address of the contribution guidelines. A pull request template needs a full address,
+     * because GitHub does not resolve relative links in it.
+     */
+    const contributingUrl = `${repositoryUrl}/blob/${defaultBranch}/${list.contributingFile}`;
 
     new github.PullRequestTemplate(gitHub, {
       lines: [
         "<!-- Tell us why the resource is awesome, and if you work for the company that makes it. -->",
         "",
-        "- [ ] I read the [contribution guidelines](https://github.com/ScaleLeap/awesome-amazon-seller/blob/master/contributing.md).",
+        `- [ ] I read the [contribution guidelines](${contributingUrl}).`,
         "- [ ] I added or changed only files in `data/entries/`, and I ran `npx projen`.",
         "- [ ] The description is short and factual, with no marketing text.",
         "- [ ] The URL has no affiliate or tracking parameters.",

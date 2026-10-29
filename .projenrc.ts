@@ -29,6 +29,11 @@ const project = new Project({
 });
 
 /**
+ * Web address of the GitHub repository.
+ */
+const REPOSITORY_URL = "https://github.com/ScaleLeap/awesome-amazon-seller";
+
+/**
  * The `package.json` of the project.
  */
 const nodePackage = new javascript.NodePackage(project, {
@@ -38,7 +43,7 @@ const nodePackage = new javascript.NodePackage(project, {
   packageManager: javascript.NodePackageManager.PNPM,
   pnpmVersion: PNPM_VERSION,
   minNodeVersion: NODE_VERSION,
-  repository: "https://github.com/ScaleLeap/awesome-amazon-seller.git",
+  repository: `${REPOSITORY_URL}.git`,
   entrypoint: "",
   npmProvenance: false,
   devDeps: [
@@ -171,6 +176,10 @@ new build.BuildWorkflow(project, {
   },
 });
 
-new ContributionTemplates(gitHub, list);
+new ContributionTemplates(gitHub, {
+  list,
+  repositoryUrl: REPOSITORY_URL,
+  defaultBranch: DEFAULT_BRANCH,
+});
 
 project.synth();
