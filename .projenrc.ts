@@ -5,6 +5,7 @@ import { AwesomeList } from "./projenrc/awesome-list.ts";
 import { Category } from "./projenrc/category.ts";
 import { Entry } from "./projenrc/entry.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
+import { AiTriageWorkflow } from "./projenrc/github/ai-triage-workflow.ts";
 import { PrLinksWorkflow } from "./projenrc/github/pr-links-workflow.ts";
 import { FINDINGS_FILE, FINDINGS_FILE_ENV, PrReportWorkflow } from "./projenrc/github/pr-report-workflow.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
@@ -127,6 +128,13 @@ const ENTRIES_PATH = "data/entries";
 const ENTRIES_DIR = join(import.meta.dirname, ENTRIES_PATH);
 
 /**
+ * GitHub logins of the maintainers whose approval of a pull request starts the AI review.
+ */
+const TRIAGE_APPROVERS = [
+  "moltar",
+];
+
+/**
  * Path of the contribution guidelines.
  */
 const CONTRIBUTING_FILE = "contributing.md";
@@ -211,6 +219,13 @@ new PrReportWorkflow(gitHub, {
   buildWorkflow,
   nodeVersionFile,
   entriesPath: ENTRIES_PATH,
+});
+
+new AiTriageWorkflow(gitHub, {
+  list,
+  approvers: TRIAGE_APPROVERS,
+  entriesPath: ENTRIES_PATH,
+  nodeVersionFile,
 });
 
 new PrLinksWorkflow(gitHub, {
