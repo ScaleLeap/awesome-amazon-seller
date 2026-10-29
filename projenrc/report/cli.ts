@@ -5,9 +5,14 @@
  * installed dependencies. For this reason, it imports only Node.js modules and types.
  *
  * Usage: `node projenrc/report/cli.ts --findings <file> --conclusion <success|failure>
- * --run-url <url> --head-sha <sha> --out <file>`
+ * --run-url <url> --head-sha <sha> --out <file> [--changed <file> --entries-path <path>]`
+ *
+ * `--changed` is a file with the paths of the files that the pull request adds or changes, one
+ * path on each line. With it, the report shows only the findings of those entries, and the
+ * errors of other entries.
  */
 import { appendFileSync, existsSync, readFileSync, writeFileSync } from "node:fs";
+import { posix } from "node:path";
 import { parseArgs } from "node:util";
 import { isFinding, type Finding } from "../rules/rule.ts";
 import { renderReport, type BuildConclusion } from "./render-report.ts";
@@ -17,6 +22,25 @@ import { renderReport, type BuildConclusion } from "./render-report.ts";
  */
 function isBuildConclusion(value: unknown): value is BuildConclusion {
   return value === "success" || value === "failure";
+}
+
+/**
+ * Extension of an entry file.
+ */
+const ENTRY_FILE_EXTENSION = ".ts";
+
+/**
+ * Reads the changed files of the pull request, and gives the entry paths of the files in the
+ * entries folder, for example "software-and-tools/acme-seller-tool".
+ */
+function readChangedEntries(file: string, entriesPath: string): Set<string> {
+  const prefix = `${posix.normalize(entriesPath)}/`;
+
+  return new Set(readFileSync(file, "utf8")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith(prefix) && line.endsWith(ENTRY_FILE_EXTENSION))
+    .map((line) => line.slice(prefix.length, -ENTRY_FILE_EXTENSION.length)));
 }
 
 /**
@@ -56,15 +80,26 @@ const { values } = parseArgs({
     "out": {
       type: "string",
     },
+    "changed": {
+      type: "string",
+    },
+    "entries-path": {
+      type: "string",
+    },
   },
 });
 
 const { findings, conclusion, out } = values;
 const runUrl = values["run-url"];
 const headSha = values["head-sha"];
+const entriesPath = values["entries-path"];
 
 if (!findings || !isBuildConclusion(conclusion) || !runUrl || !headSha || !out) {
   throw new Error("Give --findings, --conclusion (success or failure), --run-url, --head-sha and --out.");
+}
+
+if (values.changed && !entriesPath) {
+  throw new Error("Give --entries-path with --changed.");
 }
 
 const report = renderReport({
@@ -72,6 +107,9 @@ const report = renderReport({
   conclusion,
   runUrl,
   headSha,
+  changedEntries: values.changed && entriesPath
+    ? readChangedEntries(values.changed, entriesPath)
+    : undefined,
 });
 
 writeFileSync(out, report.markdown);
