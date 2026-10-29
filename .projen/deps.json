@@ -1,6 +1,10 @@
 {
   "dependencies": [
     {
+      "name": "@types/node",
+      "type": "build"
+    },
+    {
       "name": "awesome-lint",
       "type": "build"
     },
