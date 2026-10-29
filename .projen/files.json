@@ -6,6 +6,7 @@
     ".github/pull_request_template.md",
     ".github/workflows/build.yml",
     ".github/workflows/pr-links.yml",
+    ".github/workflows/pr-report.yml",
     ".gitignore",
     ".node-version",
     ".projen/deps.json",

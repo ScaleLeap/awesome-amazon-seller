@@ -11,6 +11,7 @@ node_modules/
 !/tsconfig.projen.json
 !/readme.md
 !/.github/workflows/build.yml
+!/.github/workflows/pr-report.yml
 !/.github/workflows/pr-links.yml
 !/.github/pull_request_template.md
 !/.github/ISSUE_TEMPLATE/config.yml

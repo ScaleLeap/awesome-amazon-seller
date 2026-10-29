@@ -16,6 +16,7 @@ jobs:
       self_mutation_happened: ${{ steps.self_mutation.outputs.self_mutation_happened }}
     env:
       CI: "true"
+      AWESOME_FINDINGS_FILE: /tmp/pr-report/findings.json
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -33,6 +34,20 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: build
         run: npx projen@0.104.17 build
+      - name: Save the pull request number
+        if: always() && github.event_name == 'pull_request'
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |-
+          mkdir -p /tmp/pr-report
+          echo "$PR_NUMBER" > /tmp/pr-report/pr-number.txt
+      - name: Upload the report artifact
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: pr-report
+          path: /tmp/pr-report
+          retention-days: 7
       - name: Find mutations
         id: self_mutation
         run: |-
