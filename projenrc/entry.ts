@@ -75,7 +75,7 @@ export interface IEntry {
   readonly links: readonly EntryLink[];
 
   /**
-   * Slug of the name, for example "jungle-scout".
+   * Slug of the name, for example "acme-seller-tool".
    */
   readonly slug: string;
 }
@@ -113,7 +113,7 @@ export class Entry extends Component implements IEntry {
   public readonly links: readonly EntryLink[];
 
   /**
-   * Slug of the name, for example "jungle-scout".
+   * Slug of the name, for example "acme-seller-tool".
    */
   public readonly slug: string;
 

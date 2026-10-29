@@ -16,8 +16,8 @@ describe(AwesomeList, () => {
 
     // Act
     const entry = category.addEntry({
-      name: "Jungle Scout",
-      url: "https://www.junglescout.com/",
+      name: "Acme Seller Tool",
+      url: "https://www.acme.example.com/",
       description: "Product research.",
     });
 
@@ -70,20 +70,20 @@ describe(AwesomeList, () => {
       title: "Tools",
     });
     category.addEntry({
-      name: "Jungle Scout",
-      url: "https://www.junglescout.com/",
+      name: "Acme Seller Tool",
+      url: "https://www.acme.example.com/",
       description: "Product research.",
     });
 
     // Act
     const act = () => category.addEntry({
-      name: "jungle scout",
+      name: "acme seller tool",
       url: "https://example.com/",
       description: "A copy.",
     });
 
     // Assert
-    expect(act).toThrow("jungle-scout");
+    expect(act).toThrow("acme-seller-tool");
   });
 
   it("renders the readme with sorted entries and a table of contents", () => {
@@ -100,18 +100,18 @@ describe(AwesomeList, () => {
       title: "Empty",
     });
     tools.addEntry({
-      name: "zonfy",
-      url: "https://zonfy.app/",
+      name: "zeta repricer",
+      url: "https://zeta.example.com/",
       description: "Listing tools.",
     });
     tools.addEntry({
-      name: "BuyWhere",
-      url: "https://buywhere.ai/",
+      name: "Beta Analytics",
+      url: "https://beta.example.com/",
       description: "Product search.",
       links: [
         {
           label: "GitHub",
-          url: "https://github.com/BuyWhere/buywhere-mcp",
+          url: "https://github.com/example/beta-analytics",
         },
       ],
     });

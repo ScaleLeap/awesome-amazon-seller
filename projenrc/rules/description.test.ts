@@ -63,7 +63,7 @@ describe("description rules", () => {
     },
     {
       rule: descriptionRepeatsNameRule,
-      description: "Jungle Scout is a product research tool.",
+      description: "Acme Seller Tool is a product research tool.",
     },
     {
       rule: descriptionLengthRule,

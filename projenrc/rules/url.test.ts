@@ -119,8 +119,8 @@ describe("duplicate-url", () => {
     const category = createCategory();
     category.addEntry(entryOptions());
     category.addEntry(entryOptions({
-      name: "Jungle Scout Copy",
-      url: "https://junglescout.com",
+      name: "Acme Seller Tool Copy",
+      url: "https://acme.example.com",
     }));
 
     // Act
@@ -131,8 +131,8 @@ describe("duplicate-url", () => {
       {
         rule: "duplicate-url",
         level: "error",
-        entry: "tools/jungle-scout-copy",
-        message: "The URL is already in the list as \"tools/jungle-scout\".",
+        entry: "tools/acme-seller-tool-copy",
+        message: "The URL is already in the list as \"tools/acme-seller-tool\".",
       },
     ]);
   });

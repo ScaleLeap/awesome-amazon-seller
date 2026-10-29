@@ -16,11 +16,11 @@ function writeEntriesDir(categoryId: string, fileName: string, content: string):
 }
 
 /**
- * Content of a valid entry file for "Jungle Scout".
+ * Content of a valid entry file for "Acme Seller Tool".
  */
-const JUNGLE_SCOUT_FILE = `export const entry = {
-  name: "Jungle Scout",
-  url: "https://www.junglescout.com/",
+const ACME_SELLER_TOOL_FILE = `export const entry = {
+  name: "Acme Seller Tool",
+  url: "https://www.acme.example.com/",
   description: "Product research.",
 };
 `;
@@ -30,7 +30,7 @@ describe(loadEntries, () => {
     expect.assertions(1);
 
     // Arrange
-    const entriesDir = writeEntriesDir("tools", "jungle-scout.ts", JUNGLE_SCOUT_FILE);
+    const entriesDir = writeEntriesDir("tools", "acme-seller-tool.ts", ACME_SELLER_TOOL_FILE);
 
     // Act
     const entries = await loadEntries(entriesDir);
@@ -40,8 +40,8 @@ describe(loadEntries, () => {
       {
         categoryId: "tools",
         options: {
-          name: "Jungle Scout",
-          url: "https://www.junglescout.com/",
+          name: "Acme Seller Tool",
+          url: "https://www.acme.example.com/",
           description: "Product research.",
         },
       },
@@ -52,13 +52,13 @@ describe(loadEntries, () => {
     expect.assertions(1);
 
     // Arrange
-    const entriesDir = writeEntriesDir("tools", "scout.ts", JUNGLE_SCOUT_FILE);
+    const entriesDir = writeEntriesDir("tools", "acme.ts", ACME_SELLER_TOOL_FILE);
 
     // Act
     const act = loadEntries(entriesDir);
 
     // Assert
-    await expect(act).rejects.toThrow("rename the file to \"jungle-scout.ts\"");
+    await expect(act).rejects.toThrow("rename the file to \"acme-seller-tool.ts\"");
   });
 
   it("throws when the file does not export an entry", async () => {
@@ -81,8 +81,8 @@ describe(isEntryOptions, () => {
 
     // Arrange
     const value = {
-      name: "Jungle Scout",
-      url: "https://www.junglescout.com/",
+      name: "Acme Seller Tool",
+      url: "https://www.acme.example.com/",
       description: "Product research.",
       links: [
         {

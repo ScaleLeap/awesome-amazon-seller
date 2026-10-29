@@ -21,7 +21,7 @@ export interface Finding {
   readonly level: FindingLevel;
 
   /**
-   * Path of the entry with the problem, for example "software-and-tools/jungle-scout".
+   * Path of the entry with the problem, for example "software-and-tools/acme-seller-tool".
    */
   readonly entry: string;
 
@@ -47,7 +47,7 @@ export interface IRule {
 }
 
 /**
- * Gives the path of an entry that a finding shows, for example "software-and-tools/jungle-scout".
+ * Gives the path of an entry that a finding shows, for example "software-and-tools/acme-seller-tool".
  */
 export function entryPath(entry: IEntry): string {
   return `${entry.category.id}/${entry.slug}`;

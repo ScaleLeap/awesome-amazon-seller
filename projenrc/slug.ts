@@ -15,8 +15,8 @@ const NON_SLUG_CHARACTERS = /[^a-z0-9]+/g;
 const EDGE_DASHES = /^-+|-+$/g;
 
 /**
- * Makes a lowercase, dash-separated slug from a name, for example "Jungle Scout" becomes
- * "jungle-scout".
+ * Makes a lowercase, dash-separated slug from a name, for example "Acme Seller Tool" becomes
+ * "acme-seller-tool".
  */
 export function slugify(name: string): string {
   return name

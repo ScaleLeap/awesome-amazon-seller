@@ -33,8 +33,8 @@ export function createCategory(): ICategory {
  */
 export function entryOptions(overrides: Partial<EntryOptions> = {}): EntryOptions {
   return {
-    name: "Jungle Scout",
-    url: "https://www.junglescout.com/",
+    name: "Acme Seller Tool",
+    url: "https://www.acme.example.com/",
     description: "Product research.",
     ...overrides,
   };

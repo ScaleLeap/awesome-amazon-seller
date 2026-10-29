@@ -74,7 +74,7 @@ describe(ListValidator, () => {
     const files = Testing.synth(list.project);
 
     // Assert
-    expect(files["readme.md"]).toContain("Jungle Scout");
+    expect(files["readme.md"]).toContain("Acme Seller Tool");
   });
 
   it("writes all findings to the findings file", () => {
@@ -98,7 +98,7 @@ describe(ListValidator, () => {
       {
         rule: "always-warn",
         level: "warning",
-        entry: "tools/jungle-scout",
+        entry: "tools/acme-seller-tool",
         message: "Always doubtful.",
       },
     ]);
