@@ -1,51 +1,117 @@
-# Contribution Guidelines
+# How to contribute a resource
 
-Please note that this project is released with a
-[Contributor Code of Conduct](code-of-conduct.md). By participating in this
-project you agree to abide by its terms.
+This guide shows you how to add a resource to the list, or change a resource that is in it.
 
----
+This project has a [Contributor Code of Conduct](code-of-conduct.md). When you take part in this project, you agree to obey its terms.
 
-## What kind of contributions are accepted?
+## What the list accepts
 
-Make sure to read the [the awesome manifesto](https://github.com/sindresorhus/awesome/blob/master/awesome.md)
-to understand what this list is about.
+The list is for **awesome** resources for Amazon sellers. Read [the awesome manifesto](https://github.com/sindresorhus/awesome/blob/main/awesome.md) to learn what "awesome" means here.
 
-This repository is intended for an ***awesome*** list of resources for Amazon sellers.
+Do:
 
-If you have a resource that does not fit into any of the categories, do not worry, we can start a new category or create a Misc category. Go ahead and submit it anyways.
+- Add a resource only if it is awesome, not average.
+- Write a short and factual description, with no marketing text.
+- Tell us in the pull request if you work for the company that makes the resource.
 
-## How to contribute a resource?
+Do not:
 
-### Pull request
+- Send spam.
+- Add guru courses.
+- Add affiliate links or tracking parameters, such as `?ref=` or `?utm_source=`.
 
-If you are technically-savvy, you can create a pull request on GitHub and add a resource. Please mention why you think the resource is awesome in the description of the PR.
+If the resource does not fit a category, send it anyway. We can add a new category.
 
-### Open an issue
+## Option 1: Open an issue
 
-If you do not know how to open a pull request, you can get a free account on GitHub and [open an issue](https://github.com/ScaleLeap/awesome-amazon-seller/issues/new) with your suggestion. Please explain why the resource is awesome.
+If you do not want to edit code, [suggest a resource](https://github.com/ScaleLeap/awesome-amazon-seller/issues/new?template=suggest-resource.yml) with the issue form. A maintainer adds it to the list.
 
-## Ensure your pull request adheres to the following guidelines:
+## Option 2: Open a pull request
 
-### Do
+### Before you start
 
-- Make sure your submission is awesome, and not just average.
-- If you are sending a PR, make sure you insert the resource in alphabetical order.
-- Tone down the marketing in the description. Try to stay factual.
+Install these tools:
 
-### Do Not
+- Node.js, at the version in [`.node-version`](.node-version)
+- [pnpm](https://pnpm.io/installation) 12
 
-- Submit spam.
-- Submit guru courses.
-- Submit affiliate links.
+Do not edit `readme.md`. A script makes it from the files in [`data/`](data/).
 
-Thank you for your suggestions!
+### The procedure
 
-## Updating your PR
+1. Fork the repository, then clone your fork.
+2. Install the dependencies:
 
-A lot of times, making a PR adhere to the standards above can be difficult.
-If the maintainers notice anything that we'd like changed, we'll ask you to
-edit your PR before we merge it. There's no need to open a new PR, just edit
-the existing one. If you're not sure how to do that,
-[here is a guide](https://github.com/RichardLitt/knowledge/blob/master/github/amending-a-commit-guide.md)
-on the different ways you can update your PR so that we can merge it.
+   ```sh
+   pnpm install
+   ```
+
+3. Find the folder of the category in [`data/entries/`](data/entries/). [`data/categories.ts`](data/categories.ts) lists all categories.
+4. Make a file in that folder. The file name is the resource name in lower case, with dashes for spaces. For "Acme Seller Tool", the file is `acme-seller-tool.ts`.
+5. Write the entry in the file:
+
+   ```ts
+   import type { EntryOptions } from "../../../projenrc/entry.ts";
+
+   /**
+    * The "Acme Seller Tool" entry.
+    */
+   export const entry = {
+     name: "Acme Seller Tool",
+     url: "https://www.acme.example.com/",
+     description: "Tracks the prices and sales ranks of products in one dashboard.",
+   } satisfies EntryOptions;
+   ```
+
+6. If the resource has a second important link, such as a GitHub repository, add it in `links`:
+
+   ```ts
+   links: [
+     {
+       label: "GitHub",
+       url: "https://github.com/example/example",
+     },
+   ],
+   ```
+
+7. Make the readme again:
+
+   ```sh
+   npx projen
+   ```
+
+8. Commit the entry file and `readme.md`.
+9. Open a pull request. In the description, tell us why the resource is awesome.
+
+To change a resource, edit its file in `data/entries/`, then do steps 7 to 9.
+
+### How to make sure that the entry is correct
+
+`npx projen` checks each entry before it makes the readme. If an entry has an error, the command stops and tells you the file and the fix.
+
+These rules give an error:
+
+- The description ends with `.`, `!` or `?`.
+- The description does not start with the name of the resource.
+- The description has no links. Put extra links in `links`.
+- Each URL is a full, valid URL.
+- No URL has affiliate or tracking parameters.
+- No other entry has the same URL.
+- The file name agrees with the name of the resource.
+
+These rules give only a warning:
+
+- The description has 300 characters or fewer.
+- Each URL starts with `https://`.
+
+To run all checks, the tests and the lint, the same as the CI does:
+
+```sh
+npx projen build
+```
+
+Note: awesome-lint reads the remote of the current branch. If the build says "Awesome list must reside in a valid git repository", push the branch with `git push -u origin HEAD`, then run the build again.
+
+## If a maintainer asks for changes
+
+Edit the files on the branch of your pull request, run `npx projen`, then push. You do not have to open a new pull request.
