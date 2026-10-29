@@ -1,7 +1,10 @@
 import { join } from "node:path";
-import { Project, TextFile, javascript, typescript } from "projen";
+import { Project, TextFile, github, javascript, typescript } from "projen";
 import { CATEGORIES } from "./data/categories.ts";
 import { AwesomeList } from "./projenrc/awesome-list.ts";
+import { pinActions } from "./projenrc/github/actions.ts";
+import { CiWorkflow } from "./projenrc/github/ci-workflow.ts";
+import { ContributionTemplates } from "./projenrc/github/templates.ts";
 import { ListValidator } from "./projenrc/list-validator.ts";
 import { loadEntries } from "./projenrc/load-entries.ts";
 import { DEFAULT_RULES } from "./projenrc/rules/index.ts";
@@ -133,5 +136,17 @@ new ListValidator(list, {
 });
 
 project.testTask.exec(`awesome-lint ${list.readme.path}`);
+
+/**
+ * The GitHub settings of the project. Each workflow is its own component.
+ */
+const gitHub = new github.GitHub(project, {
+  mergify: false,
+  pullRequestLint: false,
+});
+
+pinActions(gitHub);
+new CiWorkflow(gitHub);
+new ContributionTemplates(gitHub, list);
 
 project.synth();
