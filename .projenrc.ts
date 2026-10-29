@@ -1,4 +1,10 @@
+import { join } from "node:path";
 import { Project, TextFile, javascript, typescript } from "projen";
+import { CATEGORIES } from "./data/categories.ts";
+import { AwesomeList } from "./projenrc/awesome-list.ts";
+import { ListValidator } from "./projenrc/list-validator.ts";
+import { loadEntries } from "./projenrc/load-entries.ts";
+import { DEFAULT_RULES } from "./projenrc/rules/index.ts";
 
 /**
  * Version of pnpm that the project uses.
@@ -59,6 +65,7 @@ const tsconfig = new javascript.TypescriptConfig(project, {
   include: [
     ".projenrc.ts",
     "projenrc/**/*.ts",
+    "data/**/*.ts",
   ],
   compilerOptions: {
     target: "ESNext",
@@ -92,5 +99,39 @@ const projenrc = new typescript.ProjenrcTs(project, {
 projenrc.tsconfig.addExtends(tsconfig);
 
 project.testTask.exec("vitest run");
+
+/**
+ * Folder with one subfolder for each category, and one file for each entry.
+ */
+const ENTRIES_DIR = join(import.meta.dirname, "data", "entries");
+
+/**
+ * Path of the contribution guidelines.
+ */
+const CONTRIBUTING_FILE = "contributing.md";
+
+/**
+ * The list that `readme.md` shows.
+ */
+const list = new AwesomeList(project, {
+  title: "Awesome Amazon Seller",
+  description: "A curated list of tools and resources for Amazon sellers.",
+  contributingFile: CONTRIBUTING_FILE,
+});
+
+for (const category of CATEGORIES) {
+  list.addCategory(category);
+}
+
+for (const { categoryId, options } of await loadEntries(ENTRIES_DIR)) {
+  list.category(categoryId).addEntry(options);
+}
+
+new ListValidator(list, {
+  rules: DEFAULT_RULES,
+  findingsFile: process.env.AWESOME_FINDINGS_FILE,
+});
+
+project.testTask.exec(`awesome-lint ${list.readme.path}`);
 
 project.synth();
