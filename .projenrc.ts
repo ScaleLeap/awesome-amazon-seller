@@ -6,6 +6,7 @@ import { Category } from "./projenrc/category.ts";
 import { Entry } from "./projenrc/entry.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
 import { PrLinksWorkflow } from "./projenrc/github/pr-links-workflow.ts";
+import { FINDINGS_FILE, FINDINGS_FILE_ENV, PrReportWorkflow } from "./projenrc/github/pr-report-workflow.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
 import { ListValidator } from "./projenrc/list-validator.ts";
@@ -163,7 +164,7 @@ if (entriesByCategory.size > 0) {
 
 new ListValidator(list, {
   rules: DEFAULT_RULES,
-  findingsFile: process.env.AWESOME_FINDINGS_FILE,
+  findingsFile: process.env[FINDINGS_FILE_ENV],
 });
 
 project.testTask.exec(`awesome-lint ${list.readme.path}`);
@@ -178,13 +179,20 @@ const gitHub = new github.GitHub(project, {
 
 pinActions(gitHub);
 
-new build.BuildWorkflow(project, {
+/**
+ * The build workflow. It runs the projen build on each pull request and on each push to the
+ * default branch.
+ */
+const buildWorkflow = new build.BuildWorkflow(project, {
   buildTask: project.buildTask,
   runsOn: RUNS_ON,
   preBuildSteps: installSteps({
     nodeVersionFile,
   }),
   mutableBuild: false,
+  env: {
+    [FINDINGS_FILE_ENV]: FINDINGS_FILE,
+  },
   permissions: {
     contents: github.workflows.JobPermission.READ,
   },
@@ -197,6 +205,12 @@ new build.BuildWorkflow(project, {
     },
     workflowDispatch: {},
   },
+});
+
+new PrReportWorkflow(gitHub, {
+  buildWorkflow,
+  nodeVersionFile,
+  entriesPath: ENTRIES_PATH,
 });
 
 new PrLinksWorkflow(gitHub, {

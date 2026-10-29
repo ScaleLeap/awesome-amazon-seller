@@ -1,4 +1,5 @@
-import { writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { dirname } from "node:path";
 import type { IConstruct } from "constructs";
 import { Component } from "projen";
 import type { IAwesomeList } from "./awesome-list.ts";
@@ -83,6 +84,9 @@ export class ListValidator extends Component {
     }
 
     if (this.findingsFile) {
+      mkdirSync(dirname(this.findingsFile), {
+        recursive: true,
+      });
       writeFileSync(this.findingsFile, `${JSON.stringify(findings, undefined, 2)}\n`);
     }
 
