@@ -44,6 +44,7 @@ describe(loadEntries, () => {
           url: "https://www.acme.example.com/",
           description: "Product research.",
         },
+        file: join(entriesDir, "tools", "acme-seller-tool.ts"),
       },
     ]);
   });
