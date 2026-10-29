@@ -1,6 +1,10 @@
 {
   "files": [
     ".gitattributes",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/suggest-resource.yml",
+    ".github/pull_request_template.md",
+    ".github/workflows/ci.yml",
     ".gitignore",
     ".node-version",
     ".projen/deps.json",
