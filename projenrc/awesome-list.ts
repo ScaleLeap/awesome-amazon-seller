@@ -1,0 +1,159 @@
+import { Component, type Project } from "projen";
+import type { ICategory } from "./category.ts";
+import type { IEntry } from "./entry.ts";
+import { ReadmeFile } from "./readme-file.ts";
+
+/**
+ * Options for an awesome list.
+ */
+export interface AwesomeListOptions {
+  /**
+   * Title of the list, for example "Awesome Amazon Seller".
+   */
+  readonly title: string;
+
+  /**
+   * One-sentence description of the list. It shows below the title.
+   */
+  readonly description: string;
+
+  /**
+   * Path of the contribution guidelines, relative to the readme.
+   */
+  readonly contributingFile: string;
+}
+
+/**
+ * An awesome list: a set of categories, each with its entries.
+ */
+export interface IAwesomeList {
+  /**
+   * Title of the list.
+   */
+  readonly title: string;
+
+  /**
+   * Description of the list.
+   */
+  readonly description: string;
+
+  /**
+   * Path of the contribution guidelines, relative to the readme.
+   */
+  readonly contributingFile: string;
+
+  /**
+   * The categories of the list, in the order they were added.
+   */
+  readonly categories: ICategory[];
+
+  /**
+   * All the entries of all the categories.
+   */
+  readonly entries: IEntry[];
+
+  /**
+   * Adds a category. The readme shows the categories in the order they were added.
+   *
+   * @throws if the list already has a category with the same ID
+   */
+  addCategory(category: ICategory): void;
+
+  /**
+   * Finds a category by its ID.
+   *
+   * @throws if no category has that ID
+   */
+  category(id: string): ICategory;
+}
+
+/**
+ * Construct ID of the list component in the project.
+ */
+const AWESOME_LIST_ID = "AwesomeList";
+
+/**
+ * An awesome list that renders to `readme.md`.
+ */
+export class AwesomeList extends Component implements IAwesomeList {
+  /**
+   * Title of the list.
+   */
+  public readonly title: string;
+
+  /**
+   * Description of the list.
+   */
+  public readonly description: string;
+
+  /**
+   * Path of the contribution guidelines, relative to the readme.
+   */
+  public readonly contributingFile: string;
+
+  /**
+   * The readme file that shows the list.
+   */
+  public readonly readme: ReadmeFile;
+
+  /**
+   * The categories of the list, in the order they were added.
+   */
+  private readonly _categories: ICategory[] = [];
+
+  /**
+   * Creates the list and its readme file.
+   */
+  constructor(project: Project, options: AwesomeListOptions) {
+    super(project, AWESOME_LIST_ID);
+
+    this.title = options.title;
+    this.description = options.description;
+    this.contributingFile = options.contributingFile;
+    this.readme = new ReadmeFile(this);
+  }
+
+  /**
+   * Adds a category. The readme shows the categories in the order they were added.
+   *
+   * @throws if the list already has a category with the same ID
+   */
+  public addCategory(category: ICategory): void {
+    if (this._categories.some((candidate) => candidate.id === category.id)) {
+      throw new Error(`The list already has a category with the ID "${category.id}"`);
+    }
+
+    this._categories.push(category);
+  }
+
+  /**
+   * Finds a category by its ID.
+   *
+   * @throws if no category has that ID
+   */
+  public category(id: string): ICategory {
+    const category = this.categories.find((candidate) => candidate.id === id);
+
+    if (!category) {
+      throw new Error(`Unknown category "${id}"`);
+    }
+
+    return category;
+  }
+
+  /**
+   * The categories of the list, in the order they were added.
+   */
+  public get categories(): ICategory[] {
+    return [
+      ...this._categories,
+    ];
+  }
+
+  /**
+   * All the entries of all the categories.
+   */
+  public get entries(): IEntry[] {
+    return this.categories.flatMap((category) => category.entries);
+  }
+}
