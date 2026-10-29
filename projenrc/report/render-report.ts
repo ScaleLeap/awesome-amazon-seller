@@ -34,6 +34,15 @@ export interface ReportInput {
    * Commit that the build checked.
    */
   readonly headSha: string;
+
+  /**
+   * Paths of the entries that the pull request adds or changes, in the form of a finding entry,
+   * for example "software-and-tools/acme-seller-tool". The report shows the findings of these
+   * entries, and the errors of other entries only.
+   *
+   * @default - all findings belong to the pull request
+   */
+  readonly changedEntries?: ReadonlySet<string>;
 }
 
 /**
@@ -99,9 +108,13 @@ function renderTable(findings: readonly Finding[]): string[] {
 /**
  * Makes the summary sentence of the report.
  */
-function renderSummary(input: ReportInput, errorCount: number, warningCount: number): string {
+function renderSummary(input: ReportInput, errorCount: number, warningCount: number, otherErrorCount: number): string {
   if (errorCount > 0) {
     return `The entries have ${errorCount} error(s). Fix them, run \`npx projen\`, then push again.`;
+  }
+
+  if (otherErrorCount > 0) {
+    return `The entries of this pull request have no errors. The build failed because ${otherErrorCount} error(s) are in other entries. A maintainer fixes those.`;
   }
 
   if (input.conclusion === "failure") {
@@ -122,7 +135,14 @@ function renderSummary(input: ReportInput, errorCount: number, warningCount: num
  * Makes the pull request comment and the status label from the result of the build.
  */
 export function renderReport(input: ReportInput): Report {
-  const findings = input.findings ?? [];
+  const { changedEntries } = input;
+  const allFindings = input.findings ?? [];
+  const findings = changedEntries
+    ? allFindings.filter((finding) => changedEntries.has(finding.entry))
+    : allFindings;
+  const otherErrors = changedEntries
+    ? allFindings.filter((finding) => !changedEntries.has(finding.entry) && finding.level === "error")
+    : [];
   const errorCount = findings.filter((finding) => finding.level === "error").length;
   const warningCount = findings.length - errorCount;
   const status: ReportStatus = errorCount > 0 || input.conclusion === "failure"
@@ -132,11 +152,19 @@ export function renderReport(input: ReportInput): Report {
   const markdown = [
     HEADING,
     "",
-    renderSummary(input, errorCount, warningCount),
+    renderSummary(input, errorCount, warningCount, otherErrors.length),
     "",
     ...(findings.length > 0
       ? [
         ...renderTable(findings),
+        "",
+      ]
+      : []),
+    ...(otherErrors.length > 0
+      ? [
+        "### Errors in other entries",
+        "",
+        ...renderTable(otherErrors),
         "",
       ]
       : []),

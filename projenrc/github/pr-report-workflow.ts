@@ -26,6 +26,11 @@ export const FINDINGS_FILE = `${REPORT_DIR}/findings.json`;
 const PR_NUMBER_FILE = `${REPORT_DIR}/pr-number.txt`;
 
 /**
+ * File of the paths of the files that the pull request adds or changes.
+ */
+const CHANGED_FILE = `${REPORT_DIR}/changed.txt`;
+
+/**
  * File that the report script writes the comment to.
  */
 const REPORT_FILE = `${REPORT_DIR}/report.md`;
@@ -211,6 +216,7 @@ export class PrReportWorkflow extends Component {
             "  echo \"::error::The pull request number in the artifact does not agree with pull request $number.\"",
             "  exit 1",
             "fi",
+            `gh api "repos/$REPO/pulls/$number/files" --paginate --jq '.[] | select(.status != "removed") | .filename' > ${CHANGED_FILE}`,
             `added=$(gh api "repos/$REPO/pulls/$number/files" --paginate --jq '.[] | select(.status == "added" and (.filename | startswith("${options.entriesPath}/"))) | .filename' | wc -l | tr -d ' ')`,
             "echo \"number=$number\" >> \"$GITHUB_OUTPUT\"",
             "echo \"added=$added\" >> \"$GITHUB_OUTPUT\"",
@@ -225,7 +231,7 @@ export class PrReportWorkflow extends Component {
             RUN_URL: `\${{ ${event}.html_url }}`,
             HEAD_SHA: `\${{ ${event}.head_sha }}`,
           },
-          run: `node ${relative(gitHub.project.outdir, REPORT_SCRIPT)} --findings ${FINDINGS_FILE} --conclusion "$CONCLUSION" --run-url "$RUN_URL" --head-sha "$HEAD_SHA" --out ${REPORT_FILE}`,
+          run: `node ${relative(gitHub.project.outdir, REPORT_SCRIPT)} --findings ${FINDINGS_FILE} --conclusion "$CONCLUSION" --run-url "$RUN_URL" --head-sha "$HEAD_SHA" --out ${REPORT_FILE} --changed ${CHANGED_FILE} --entries-path ${options.entriesPath}`,
         },
         {
           name: "Post the report",

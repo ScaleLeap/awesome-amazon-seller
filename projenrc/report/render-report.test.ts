@@ -111,6 +111,56 @@ describe(renderReport, () => {
     expect(report.markdown).toMatchSnapshot();
   });
 
+  it("shows only the findings of the changed entries, and the errors of other entries", () => {
+    expect.assertions(4);
+
+    // Arrange
+    const otherError: Finding = {
+      ...ERROR,
+      entry: "tools/other-tool",
+    };
+    const reportInput = input({
+      findings: [
+        WARNING,
+        otherError,
+      ],
+      conclusion: "failure",
+      changedEntries: new Set([
+        "tools/acme-seller-tool",
+      ]),
+    });
+
+    // Act
+    const report = renderReport(reportInput);
+
+    // Assert
+    expect(report.markdown).not.toContain("tools/beta-analytics");
+    expect(report.markdown).toContain("### Errors in other entries");
+    expect(report.markdown).toContain("tools/other-tool");
+    expect(report.markdown).toContain("The entries of this pull request have no errors.");
+  });
+
+  it("gives a clean report when only other entries have warnings", () => {
+    expect.assertions(2);
+
+    // Arrange
+    const reportInput = input({
+      findings: [
+        WARNING,
+      ],
+      changedEntries: new Set([
+        "tools/acme-seller-tool",
+      ]),
+    });
+
+    // Act
+    const report = renderReport(reportInput);
+
+    // Assert
+    expect(report.markdown).toContain("The build passed, and the entry checks found no problems.");
+    expect(report.status).toBe("ready");
+  });
+
   it("tells the contributor to run projen when the build failed with no errors", () => {
     expect.assertions(2);
 
