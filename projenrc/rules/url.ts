@@ -1,4 +1,4 @@
-import type { IEntry } from "../entry.ts";
+import { entryUrls, type IEntry } from "../entry.ts";
 import { entryPath, entryRule, type IRule } from "./rule.ts";
 
 /**
@@ -15,16 +15,6 @@ const WWW_PREFIX = /^www\./;
  * Slashes at the end of a path.
  */
 const TRAILING_SLASHES = /\/+$/;
-
-/**
- * Gives all the URLs of an entry: its main URL and its extra links.
- */
-function entryUrls(entry: IEntry): string[] {
-  return [
-    entry.url,
-    ...entry.links.map((link) => link.url),
-  ];
-}
 
 /**
  * Parses a URL, or gives `undefined` when it is not a valid URL.
