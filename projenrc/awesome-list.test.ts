@@ -2,7 +2,8 @@ import { Testing } from "projen";
 import { describe, expect, it } from "vitest";
 import { AwesomeList } from "./awesome-list.ts";
 import { Category } from "./category.ts";
-import { TOOLS_CATEGORY, addCategory, createList } from "./testing.ts";
+import { Entry } from "./entry.ts";
+import { TOOLS_CATEGORY, addCategory, addEntry, createList, entryOptions } from "./testing.ts";
 
 describe(AwesomeList, () => {
   it("links an entry to its category in both directions", () => {
@@ -13,7 +14,7 @@ describe(AwesomeList, () => {
     const category = addCategory(list);
 
     // Act
-    const entry = category.addEntry({
+    const entry = addEntry(category, {
       name: "Acme Seller Tool",
       url: "https://www.acme.example.com/",
       description: "Product research.",
@@ -71,19 +72,38 @@ describe(AwesomeList, () => {
     expect(act).toThrow(`The list already has a category with the ID "${TOOLS_CATEGORY.id}"`);
   });
 
+  it("throws when an entry is added to a category that is not its own", () => {
+    expect.assertions(1);
+
+    // Arrange
+    const list = createList();
+    const tools = addCategory(list);
+    const blogs = addCategory(list, {
+      id: "blogs",
+      title: "Blogs",
+    });
+    const entry = new Entry(tools, entryOptions());
+
+    // Act
+    const act = () => blogs.addEntry(entry);
+
+    // Assert
+    expect(act).toThrow("The entry \"acme-seller-tool\" belongs to the category \"tools\", not \"blogs\"");
+  });
+
   it("throws when two entries in a category have the same slug", () => {
     expect.assertions(1);
 
     // Arrange
     const category = addCategory(createList());
-    category.addEntry({
+    addEntry(category, {
       name: "Acme Seller Tool",
       url: "https://www.acme.example.com/",
       description: "Product research.",
     });
 
     // Act
-    const act = () => category.addEntry({
+    const act = () => addEntry(category, {
       name: "acme seller tool",
       url: "https://example.com/",
       description: "A copy.",
@@ -106,12 +126,12 @@ describe(AwesomeList, () => {
       id: "empty",
       title: "Empty",
     });
-    tools.addEntry({
+    addEntry(tools, {
       name: "zeta repricer",
       url: "https://zeta.example.com/",
       description: "Listing tools.",
     });
-    tools.addEntry({
+    addEntry(tools, {
       name: "Beta Analytics",
       url: "https://beta.example.com/",
       description: "Product search.",

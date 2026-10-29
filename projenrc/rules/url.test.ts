@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createCategory, entryOptions } from "../testing.ts";
+import { addEntry, createCategory } from "../testing.ts";
 import type { IRule } from "./rule.ts";
 import { duplicateUrlRule, httpsRule, normalizeUrl, trackingParametersRule, validUrlRule } from "./url.ts";
 
@@ -8,9 +8,9 @@ import { duplicateUrlRule, httpsRule, normalizeUrl, trackingParametersRule, vali
  */
 function check(rule: IRule, url: string): string[] {
   const { list, category } = createCategory();
-  category.addEntry(entryOptions({
+  addEntry(category, {
     url,
-  }));
+  });
 
   return rule.check(list).map((finding) => finding.rule);
 }
@@ -79,14 +79,14 @@ describe("URL rules", () => {
 
     // Arrange
     const { list, category } = createCategory();
-    category.addEntry(entryOptions({
+    addEntry(category, {
       links: [
         {
           label: "GitHub",
           url: "https://github.com/example/?ref=list",
         },
       ],
-    }));
+    });
 
     // Act
     const findings = trackingParametersRule.check(list);
@@ -117,11 +117,11 @@ describe("duplicate-url", () => {
 
     // Arrange
     const { list, category } = createCategory();
-    category.addEntry(entryOptions());
-    category.addEntry(entryOptions({
+    addEntry(category);
+    addEntry(category, {
       name: "Acme Seller Tool Copy",
       url: "https://acme.example.com",
-    }));
+    });
 
     // Act
     const findings = duplicateUrlRule.check(list);

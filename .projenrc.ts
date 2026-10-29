@@ -3,6 +3,7 @@ import { Project, TextFile, build, github, javascript, typescript } from "projen
 import { CATEGORIES } from "./data/categories.ts";
 import { AwesomeList } from "./projenrc/awesome-list.ts";
 import { Category } from "./projenrc/category.ts";
+import { Entry } from "./projenrc/entry.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
@@ -131,12 +132,26 @@ const list = new AwesomeList(project, {
   contributingFile: CONTRIBUTING_FILE,
 });
 
-for (const options of CATEGORIES) {
-  list.addCategory(new Category(list, options));
+/**
+ * The loaded entries, grouped by the ID of their category folder.
+ */
+const entriesByCategory = Map.groupBy(await loadEntries(ENTRIES_DIR), (entry) => entry.categoryId);
+
+for (const categoryOptions of CATEGORIES) {
+  const category = new Category(list, categoryOptions);
+  list.addCategory(category);
+
+  for (const { options } of entriesByCategory.get(category.id) ?? []) {
+    category.addEntry(new Entry(category, options));
+  }
+
+  entriesByCategory.delete(category.id);
 }
 
-for (const { categoryId, options } of await loadEntries(ENTRIES_DIR)) {
-  list.category(categoryId).addEntry(options);
+if (entriesByCategory.size > 0) {
+  throw new Error(`Unknown category folders in ${ENTRIES_DIR}: ${[
+    ...entriesByCategory.keys(),
+  ].join(", ")}`);
 }
 
 new ListValidator(list, {

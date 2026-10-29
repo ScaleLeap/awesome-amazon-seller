@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createCategory, entryOptions } from "../testing.ts";
+import { addEntry, createCategory } from "../testing.ts";
 import {
   descriptionLengthRule,
   descriptionLinksRule,
@@ -14,9 +14,9 @@ import type { IRule } from "./rule.ts";
  */
 function check(rule: IRule, description: string): string[] {
   const { list, category } = createCategory();
-  category.addEntry(entryOptions({
+  addEntry(category, {
     description,
-  }));
+  });
 
   return rule.check(list).map((finding) => finding.rule);
 }

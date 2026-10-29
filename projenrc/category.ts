@@ -1,6 +1,6 @@
 import { Component } from "projen";
 import type { IConstruct } from "constructs";
-import { Entry, type EntryOptions, type IEntry } from "./entry.ts";
+import type { IEntry } from "./entry.ts";
 
 /**
  * Options for a category of the list.
@@ -38,8 +38,10 @@ export interface ICategory {
 
   /**
    * Adds an entry to this category.
+   *
+   * @throws if the entry belongs to another category
    */
-  addEntry(options: EntryOptions): IEntry;
+  addEntry(entry: IEntry): void;
 }
 
 /**
@@ -57,6 +59,11 @@ export class Category extends Component implements ICategory {
   public readonly title: string;
 
   /**
+   * The entries of this category, in the order they were added.
+   */
+  private readonly _entries: IEntry[] = [];
+
+  /**
    * Creates a category. Add it to a list with `IAwesomeList.addCategory()`.
    */
   constructor(scope: IConstruct, options: CategoryOptions) {
@@ -68,15 +75,23 @@ export class Category extends Component implements ICategory {
 
   /**
    * Adds an entry to this category.
+   *
+   * @throws if the entry belongs to another category
    */
-  public addEntry(options: EntryOptions): IEntry {
-    return new Entry(this, options);
+  public addEntry(entry: IEntry): void {
+    if (entry.category !== this) {
+      throw new Error(`The entry "${entry.slug}" belongs to the category "${entry.category.id}", not "${this.id}"`);
+    }
+
+    this._entries.push(entry);
   }
 
   /**
    * The entries of this category, in the order they were added.
    */
   public get entries(): IEntry[] {
-    return this.node.children.filter((child): child is Entry => child instanceof Entry);
+    return [
+      ...this._entries,
+    ];
   }
 }
