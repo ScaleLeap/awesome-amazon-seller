@@ -17,7 +17,8 @@
   },
   "include": [
     ".projenrc.ts",
-    "projenrc/**/*.ts"
+    "projenrc/**/*.ts",
+    "data/**/*.ts"
   ],
   "exclude": [
     "node_modules"

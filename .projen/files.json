@@ -6,6 +6,7 @@
     ".projen/deps.json",
     ".projen/files.json",
     ".projen/tasks.json",
+    "readme.md",
     "tsconfig.json",
     "tsconfig.projen.json"
   ],

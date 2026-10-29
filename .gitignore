@@ -9,4 +9,5 @@ node_modules/
 !/.node-version
 !/tsconfig.json
 !/tsconfig.projen.json
+!/readme.md
 !/.projenrc.ts

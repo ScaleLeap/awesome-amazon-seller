@@ -112,6 +112,9 @@
       "steps": [
         {
           "exec": "vitest run"
+        },
+        {
+          "exec": "awesome-lint readme.md"
         }
       ]
     }
