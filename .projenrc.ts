@@ -2,6 +2,7 @@ import { join } from "node:path";
 import { Project, TextFile, build, github, javascript, typescript } from "projen";
 import { CATEGORIES } from "./data/categories.ts";
 import { AwesomeList } from "./projenrc/awesome-list.ts";
+import { Category } from "./projenrc/category.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
@@ -130,8 +131,8 @@ const list = new AwesomeList(project, {
   contributingFile: CONTRIBUTING_FILE,
 });
 
-for (const category of CATEGORIES) {
-  list.addCategory(category);
+for (const options of CATEGORIES) {
+  list.addCategory(new Category(list, options));
 }
 
 for (const { categoryId, options } of await loadEntries(ENTRIES_DIR)) {

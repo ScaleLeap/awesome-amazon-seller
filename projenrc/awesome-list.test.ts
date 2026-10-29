@@ -1,7 +1,8 @@
 import { Testing } from "projen";
 import { describe, expect, it } from "vitest";
 import { AwesomeList } from "./awesome-list.ts";
-import { createList } from "./testing.ts";
+import { Category } from "./category.ts";
+import { TOOLS_CATEGORY, addCategory, createList } from "./testing.ts";
 
 describe(AwesomeList, () => {
   it("links an entry to its category in both directions", () => {
@@ -9,10 +10,7 @@ describe(AwesomeList, () => {
 
     // Arrange
     const list = createList();
-    const category = list.addCategory({
-      id: "tools",
-      title: "Tools",
-    });
+    const category = addCategory(list);
 
     // Act
     const entry = category.addEntry({
@@ -36,10 +34,7 @@ describe(AwesomeList, () => {
 
     // Arrange
     const list = createList();
-    const category = list.addCategory({
-      id: "tools",
-      title: "Tools",
-    });
+    const category = addCategory(list);
 
     // Act
     const found = list.category("tools");
@@ -61,14 +56,26 @@ describe(AwesomeList, () => {
     expect(act).toThrow("Unknown category \"missing\"");
   });
 
+  it("throws when two categories have the same ID", () => {
+    expect.assertions(1);
+
+    // Arrange
+    const list = createList();
+    addCategory(list);
+    const copy = new Category(list.project, TOOLS_CATEGORY);
+
+    // Act
+    const act = () => list.addCategory(copy);
+
+    // Assert
+    expect(act).toThrow(`The list already has a category with the ID "${TOOLS_CATEGORY.id}"`);
+  });
+
   it("throws when two entries in a category have the same slug", () => {
     expect.assertions(1);
 
     // Arrange
-    const category = createList().addCategory({
-      id: "tools",
-      title: "Tools",
-    });
+    const category = addCategory(createList());
     category.addEntry({
       name: "Acme Seller Tool",
       url: "https://www.acme.example.com/",
@@ -91,11 +98,11 @@ describe(AwesomeList, () => {
 
     // Arrange
     const list = createList();
-    const tools = list.addCategory({
+    const tools = addCategory(list, {
       id: "tools",
       title: "Software and Tools",
     });
-    list.addCategory({
+    addCategory(list, {
       id: "empty",
       title: "Empty",
     });

@@ -1,6 +1,5 @@
 import { Component } from "projen";
 import type { IConstruct } from "constructs";
-import type { IAwesomeList } from "./awesome-list.ts";
 import { Entry, type EntryOptions, type IEntry } from "./entry.ts";
 
 /**
@@ -22,11 +21,6 @@ export interface CategoryOptions {
  * A section of the list that holds the entries of one kind of resource.
  */
 export interface ICategory {
-  /**
-   * The list that holds this category.
-   */
-  readonly list: IAwesomeList;
-
   /**
    * Stable ID of the category.
    */
@@ -53,11 +47,6 @@ export interface ICategory {
  */
 export class Category extends Component implements ICategory {
   /**
-   * The list that holds this category.
-   */
-  public readonly list: IAwesomeList;
-
-  /**
    * Stable ID of the category.
    */
   public readonly id: string;
@@ -68,12 +57,11 @@ export class Category extends Component implements ICategory {
   public readonly title: string;
 
   /**
-   * Creates a category in a list. Use `IAwesomeList.addCategory()` in place of this constructor.
+   * Creates a category. Add it to a list with `IAwesomeList.addCategory()`.
    */
-  constructor(list: IAwesomeList & IConstruct, options: CategoryOptions) {
-    super(list, options.id);
+  constructor(scope: IConstruct, options: CategoryOptions) {
+    super(scope, options.id);
 
-    this.list = list;
     this.id = options.id;
     this.title = options.title;
   }

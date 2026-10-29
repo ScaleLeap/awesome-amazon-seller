@@ -7,12 +7,12 @@ import { duplicateUrlRule, httpsRule, normalizeUrl, trackingParametersRule, vali
  * Runs a rule on a list with one entry, and gives the IDs of the rules that found problems.
  */
 function check(rule: IRule, url: string): string[] {
-  const category = createCategory();
+  const { list, category } = createCategory();
   category.addEntry(entryOptions({
     url,
   }));
 
-  return rule.check(category.list).map((finding) => finding.rule);
+  return rule.check(list).map((finding) => finding.rule);
 }
 
 describe("URL rules", () => {
@@ -78,7 +78,7 @@ describe("URL rules", () => {
     expect.assertions(1);
 
     // Arrange
-    const category = createCategory();
+    const { list, category } = createCategory();
     category.addEntry(entryOptions({
       links: [
         {
@@ -89,7 +89,7 @@ describe("URL rules", () => {
     }));
 
     // Act
-    const findings = trackingParametersRule.check(category.list);
+    const findings = trackingParametersRule.check(list);
 
     // Assert
     expect(findings).toHaveLength(1);
@@ -116,7 +116,7 @@ describe("duplicate-url", () => {
     expect.assertions(1);
 
     // Arrange
-    const category = createCategory();
+    const { list, category } = createCategory();
     category.addEntry(entryOptions());
     category.addEntry(entryOptions({
       name: "Acme Seller Tool Copy",
@@ -124,7 +124,7 @@ describe("duplicate-url", () => {
     }));
 
     // Act
-    const findings = duplicateUrlRule.check(category.list);
+    const findings = duplicateUrlRule.check(list);
 
     // Assert
     expect(findings).toStrictEqual([

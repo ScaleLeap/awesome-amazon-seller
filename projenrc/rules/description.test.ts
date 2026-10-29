@@ -13,12 +13,12 @@ import type { IRule } from "./rule.ts";
  * Runs a rule on a list with one entry, and gives the IDs of the rules that found problems.
  */
 function check(rule: IRule, description: string): string[] {
-  const category = createCategory();
+  const { list, category } = createCategory();
   category.addEntry(entryOptions({
     description,
   }));
 
-  return rule.check(category.list).map((finding) => finding.rule);
+  return rule.check(list).map((finding) => finding.rule);
 }
 
 describe("description rules", () => {

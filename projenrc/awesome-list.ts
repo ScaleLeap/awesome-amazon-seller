@@ -1,5 +1,5 @@
 import { Component, type Project } from "projen";
-import { Category, type CategoryOptions, type ICategory } from "./category.ts";
+import type { ICategory } from "./category.ts";
 import type { IEntry } from "./entry.ts";
 import { ReadmeFile } from "./readme-file.ts";
 
@@ -54,8 +54,10 @@ export interface IAwesomeList {
 
   /**
    * Adds a category. The readme shows the categories in the order they were added.
+   *
+   * @throws if the list already has a category with the same ID
    */
-  addCategory(options: CategoryOptions): ICategory;
+  addCategory(category: ICategory): void;
 
   /**
    * Finds a category by its ID.
@@ -95,6 +97,11 @@ export class AwesomeList extends Component implements IAwesomeList {
   public readonly readme: ReadmeFile;
 
   /**
+   * The categories of the list, in the order they were added.
+   */
+  private readonly _categories: ICategory[] = [];
+
+  /**
    * Creates the list and its readme file.
    */
   constructor(project: Project, options: AwesomeListOptions) {
@@ -108,9 +115,15 @@ export class AwesomeList extends Component implements IAwesomeList {
 
   /**
    * Adds a category. The readme shows the categories in the order they were added.
+   *
+   * @throws if the list already has a category with the same ID
    */
-  public addCategory(options: CategoryOptions): ICategory {
-    return new Category(this, options);
+  public addCategory(category: ICategory): void {
+    if (this._categories.some((candidate) => candidate.id === category.id)) {
+      throw new Error(`The list already has a category with the ID "${category.id}"`);
+    }
+
+    this._categories.push(category);
   }
 
   /**
@@ -132,7 +145,9 @@ export class AwesomeList extends Component implements IAwesomeList {
    * The categories of the list, in the order they were added.
    */
   public get categories(): ICategory[] {
-    return this.node.children.filter((child): child is Category => child instanceof Category);
+    return [
+      ...this._categories,
+    ];
   }
 
   /**

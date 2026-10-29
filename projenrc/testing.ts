@@ -1,6 +1,6 @@
 import { Project } from "projen";
 import { AwesomeList } from "./awesome-list.ts";
-import type { ICategory } from "./category.ts";
+import { Category, type CategoryOptions, type ICategory } from "./category.ts";
 import type { EntryOptions } from "./entry.ts";
 
 /**
@@ -19,13 +19,48 @@ export function createList(): AwesomeList {
 }
 
 /**
- * Makes a test list with one "tools" category, and gives that category.
+ * Options of the "tools" category that the tests use.
  */
-export function createCategory(): ICategory {
-  return createList().addCategory({
-    id: "tools",
-    title: "Tools",
-  });
+export const TOOLS_CATEGORY: CategoryOptions = {
+  id: "tools",
+  title: "Tools",
+};
+
+/**
+ * Makes a category from options, and adds it to a list.
+ */
+export function addCategory(list: AwesomeList, options: CategoryOptions = TOOLS_CATEGORY): ICategory {
+  const category = new Category(list, options);
+  list.addCategory(category);
+
+  return category;
+}
+
+/**
+ * A test list and its one category.
+ */
+export interface ListWithCategory {
+  /**
+   * The test list.
+   */
+  readonly list: AwesomeList;
+
+  /**
+   * The "tools" category of the list.
+   */
+  readonly category: ICategory;
+}
+
+/**
+ * Makes a test list with one "tools" category.
+ */
+export function createCategory(): ListWithCategory {
+  const list = createList();
+
+  return {
+    list,
+    category: addCategory(list),
+  };
 }
 
 /**
