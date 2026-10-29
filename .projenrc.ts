@@ -33,6 +33,7 @@ const nodePackage = new javascript.NodePackage(project, {
   entrypoint: "",
   npmProvenance: false,
   devDeps: [
+    "@types/node",
     "awesome-lint",
     "constructs",
     "projen",
@@ -70,6 +71,9 @@ const tsconfig = new javascript.TypescriptConfig(project, {
     verbatimModuleSyntax: true,
     noUncheckedIndexedAccess: true,
     skipLibCheck: true,
+    types: [
+      "node",
+    ],
   },
 });
 
@@ -86,5 +90,7 @@ const projenrc = new typescript.ProjenrcTs(project, {
 });
 
 projenrc.tsconfig.addExtends(tsconfig);
+
+project.testTask.exec("vitest run");
 
 project.synth();

@@ -1,21 +1,7 @@
-import { Project, Testing } from "projen";
+import { Testing } from "projen";
 import { describe, expect, it } from "vitest";
 import { AwesomeList } from "./awesome-list.ts";
-
-/**
- * Makes an empty list in a new test project.
- */
-function createList(): AwesomeList {
-  const project = new Project({
-    name: "test",
-  });
-
-  return new AwesomeList(project, {
-    title: "Awesome Test",
-    description: "A list for tests.",
-    contributingFile: "contributing.md",
-  });
-}
+import { createList } from "./testing.ts";
 
 describe(AwesomeList, () => {
   it("links an entry to its category in both directions", () => {
