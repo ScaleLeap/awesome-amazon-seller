@@ -6,5 +6,5 @@ import type { EntryOptions } from "../../../projenrc/entry.ts";
 export const entry = {
   name: "Utlista",
   url: "https://www.utlista.com",
-  description: "Localises an existing product catalogue into Amazon listings for seven EU marketplaces (de, fr, it, es, nl, pl, se). Writes title, five bullets, description and backend search terms per destination marketplace rather than translating them, and validates every field against Amazon's limits before export, including search terms counted in bytes. Produces a flat file per marketplace; it does not upload to Amazon. Free for ten products.",
+  description: "Turns a product catalogue into Amazon listings for seven EU marketplaces. Writes the title, bullets, description and backend search terms for each marketplace, and checks each field against Amazon's limits. Exports a flat file per marketplace. Free for ten products.",
 } satisfies EntryOptions;

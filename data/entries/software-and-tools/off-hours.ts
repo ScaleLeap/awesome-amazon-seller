@@ -6,5 +6,5 @@ import type { EntryOptions } from "../../../projenrc/entry.ts";
 export const entry = {
   name: "Off Hours",
   url: "https://www.off-hours.app",
-  description: "Amazon Ads scheduling and automation for Seller Central and Vendor Central accounts in all marketplaces across the North America, Europe and Far East regions. Runs dayparting, budget, event, performance and bid-adjustment rules on schedules and conditions the seller defines, checked every 15 minutes. Flat $149 per month per Amazon Ads account, never a percentage of ad spend. 14-day free trial.",
+  description: "Amazon Ads dayparting, budget and bid rules for Seller Central and Vendor Central accounts in all regions. Rules run on the schedules and conditions you set, checked every 15 minutes. Flat $149 per month per Ads account. 14-day free trial.",
 } satisfies EntryOptions;
