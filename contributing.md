@@ -112,6 +112,16 @@ npx projen build
 
 Note: awesome-lint reads the remote of the current branch. If the build says "Awesome list must reside in a valid git repository", push the branch with `git push -u origin HEAD`, then run the build again.
 
+## What happens after you open the pull request
+
+These checks run automatically on each pull request:
+
+- **Build.** The build runs `npx projen build`. It fails if an entry has an error, or if `readme.md` does not agree with the entry files.
+- **Links.** A link check opens each URL in the entry files that you added or changed. A site that blocks bots with a 403 response passes.
+- **Report.** A bot posts one comment with the result of the entry checks, and updates it after each push. It also sets one of these labels: `ready` or `needs-changes`.
+
+When a maintainer approves the pull request and the build passes, an AI review can add a second comment. This review only gives advice. A maintainer makes the decision.
+
 ## If a maintainer asks for changes
 
 Edit the files on the branch of your pull request, run `npx projen`, then push. You do not have to open a new pull request.

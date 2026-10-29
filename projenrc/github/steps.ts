@@ -24,14 +24,79 @@ export interface InstallStepsOptions {
 }
 
 /**
+ * Options for the step that checks out the repository.
+ */
+export interface CheckoutStepOptions {
+  /**
+   * Number of commits to get. 0 gets the full history, which `git diff` against the base branch
+   * needs.
+   *
+   * @default 1
+   */
+  readonly fetchDepth?: number;
+
+  /**
+   * Branch, tag or commit to check out.
+   *
+   * @default - the commit that started the workflow
+   */
+  readonly ref?: string;
+}
+
+/**
  * Step that checks out the repository, with no credentials left in the Git config.
  */
-export function checkoutStep(): github.workflows.JobStep {
+export function checkoutStep(options: CheckoutStepOptions = {}): github.workflows.JobStep {
   return {
     name: "Check out",
     uses: ACTIONS.checkout,
     with: {
       "persist-credentials": false,
+      ...(options.fetchDepth === undefined
+        ? {}
+        : {
+          "fetch-depth": options.fetchDepth,
+        }),
+      ...(options.ref === undefined
+        ? {}
+        : {
+          ref: options.ref,
+        }),
+    },
+  };
+}
+
+/**
+ * Options for the step that installs Node.js.
+ */
+export interface SetupNodeStepOptions {
+  /**
+   * File that holds the Node.js version of the project.
+   */
+  readonly nodeVersionFile: FileBase;
+
+  /**
+   * Package manager whose store the step caches.
+   *
+   * @default - no cache
+   */
+  readonly cache?: "pnpm";
+}
+
+/**
+ * Step that installs the Node.js version of the project.
+ */
+export function setupNodeStep(options: SetupNodeStepOptions): github.workflows.JobStep {
+  return {
+    name: "Set up Node.js",
+    uses: ACTIONS.setupNode,
+    with: {
+      "node-version-file": options.nodeVersionFile.path,
+      ...(options.cache === undefined
+        ? {}
+        : {
+          cache: options.cache,
+        }),
     },
   };
 }
@@ -46,14 +111,10 @@ export function installSteps(options: InstallStepsOptions): github.workflows.Job
       name: "Set up pnpm",
       uses: ACTIONS.setupPnpm,
     },
-    {
-      name: "Set up Node.js",
-      uses: ACTIONS.setupNode,
-      with: {
-        "node-version-file": options.nodeVersionFile.path,
-        "cache": "pnpm",
-      },
-    },
+    setupNodeStep({
+      nodeVersionFile: options.nodeVersionFile,
+      cache: "pnpm",
+    }),
     {
       name: "Install dependencies",
       run: "pnpm install --frozen-lockfile",

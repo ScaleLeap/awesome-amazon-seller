@@ -1,7 +1,7 @@
 import { Project } from "projen";
 import { AwesomeList } from "./awesome-list.ts";
-import { Category, type CategoryOptions, type ICategory } from "./category.ts";
-import type { EntryOptions } from "./entry.ts";
+import { Category, type CategoryOptions } from "./category.ts";
+import { Entry, type EntryOptions, type IEntry } from "./entry.ts";
 
 /**
  * Makes an empty list in a new test project.
@@ -29,7 +29,7 @@ export const TOOLS_CATEGORY: CategoryOptions = {
 /**
  * Makes a category from options, and adds it to a list.
  */
-export function addCategory(list: AwesomeList, options: CategoryOptions = TOOLS_CATEGORY): ICategory {
+export function addCategory(list: AwesomeList, options: CategoryOptions = TOOLS_CATEGORY): Category {
   const category = new Category(list, options);
   list.addCategory(category);
 
@@ -48,7 +48,7 @@ export interface ListWithCategory {
   /**
    * The "tools" category of the list.
    */
-  readonly category: ICategory;
+  readonly category: Category;
 }
 
 /**
@@ -73,4 +73,14 @@ export function entryOptions(overrides: Partial<EntryOptions> = {}): EntryOption
     description: "Product research.",
     ...overrides,
   };
+}
+
+/**
+ * Makes an entry from valid options, and adds it to a category. Pass fields to change them.
+ */
+export function addEntry(category: Category, overrides: Partial<EntryOptions> = {}): IEntry {
+  const entry = new Entry(category, entryOptions(overrides));
+  category.addEntry(entry);
+
+  return entry;
 }

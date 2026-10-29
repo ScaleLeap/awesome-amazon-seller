@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderTriage > renders the summary and a table of verdicts 1`] = `
+"## AI review
+
+One new entry. It is a seller tool with a factual description.
+
+| Entry | Verdict | Notes |
+| :-- | :-- | :-- |
+| data/entries/software-and-tools/acme-seller-tool.ts | Accept | Fits the category. No tracking parameters. |
+
+<sub>This review is advisory. A maintainer makes the decision. Commit 0123456.</sub>
+"
+`;

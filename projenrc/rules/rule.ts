@@ -1,3 +1,4 @@
+import { isRecord } from "../guards.ts";
 import type { IAwesomeList } from "../awesome-list.ts";
 import type { IEntry } from "../entry.ts";
 
@@ -5,6 +6,14 @@ import type { IEntry } from "../entry.ts";
  * How serious a finding is. An error stops synth. A warning only shows a message.
  */
 export type FindingLevel = "error" | "warning";
+
+/**
+ * The finding levels.
+ */
+const FINDING_LEVELS: readonly FindingLevel[] = [
+  "error",
+  "warning",
+];
 
 /**
  * A problem that a rule found in the list.
@@ -93,4 +102,22 @@ export function entryRule(options: EntryRuleOptions): IRule {
         message: options.message(entry),
       })),
   };
+}
+
+/**
+ * Tells if a value is a finding level.
+ */
+export function isFindingLevel(value: unknown): value is FindingLevel {
+  return FINDING_LEVELS.some((level) => level === value);
+}
+
+/**
+ * Tells if a value has the shape of a finding, for example after it was read from a JSON file.
+ */
+export function isFinding(value: unknown): value is Finding {
+  return isRecord(value)
+    && typeof value.rule === "string"
+    && isFindingLevel(value.level)
+    && typeof value.entry === "string"
+    && typeof value.message === "string";
 }

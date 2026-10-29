@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renderReport > lists the errors before the warnings 1`] = `
+"## List check
+
+The entries have 1 error(s). Fix them, run \`npx projen\`, then push again.
+
+| Level | Entry | Rule | Problem |
+| :-- | :-- | :-- | :-- |
+| Error | tools/acme-seller-tool | description-punctuation | End the description with ".", "!" or "?". |
+| Warning | tools/beta-analytics | https | Use an "https://" URL, if the site supports it. |
+
+<sub>Commit 0123456. [Build log](https://github.com/example/list/actions/runs/1).</sub>
+"
+`;

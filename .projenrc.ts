@@ -3,7 +3,11 @@ import { Project, TextFile, build, github, javascript, typescript } from "projen
 import { CATEGORIES } from "./data/categories.ts";
 import { AwesomeList } from "./projenrc/awesome-list.ts";
 import { Category } from "./projenrc/category.ts";
+import { Entry } from "./projenrc/entry.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
+import { AiTriageWorkflow } from "./projenrc/github/ai-triage-workflow.ts";
+import { PrLinksWorkflow } from "./projenrc/github/pr-links-workflow.ts";
+import { FINDINGS_FILE, FINDINGS_FILE_ENV, PrReportWorkflow } from "./projenrc/github/pr-report-workflow.ts";
 import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
 import { ListValidator } from "./projenrc/list-validator.ts";
@@ -113,9 +117,22 @@ projenrc.tsconfig.addExtends(tsconfig);
 project.testTask.exec("vitest run");
 
 /**
- * Folder with one subfolder for each category, and one file for each entry.
+ * Folder with one subfolder for each category, and one file for each entry, relative to the
+ * project root.
  */
-const ENTRIES_DIR = join(import.meta.dirname, "data", "entries");
+const ENTRIES_PATH = "data/entries";
+
+/**
+ * Absolute path of the entries folder.
+ */
+const ENTRIES_DIR = join(import.meta.dirname, ENTRIES_PATH);
+
+/**
+ * GitHub logins of the maintainers whose approval of a pull request starts the AI review.
+ */
+const TRIAGE_APPROVERS = [
+  "moltar",
+];
 
 /**
  * Path of the contribution guidelines.
@@ -131,17 +148,31 @@ const list = new AwesomeList(project, {
   contributingFile: CONTRIBUTING_FILE,
 });
 
-for (const options of CATEGORIES) {
-  list.addCategory(new Category(list, options));
+/**
+ * The loaded entries, grouped by the ID of their category folder.
+ */
+const entriesByCategory = Map.groupBy(await loadEntries(ENTRIES_DIR), (entry) => entry.categoryId);
+
+for (const categoryOptions of CATEGORIES) {
+  const category = new Category(list, categoryOptions);
+  list.addCategory(category);
+
+  for (const { options } of entriesByCategory.get(category.id) ?? []) {
+    category.addEntry(new Entry(category, options));
+  }
+
+  entriesByCategory.delete(category.id);
 }
 
-for (const { categoryId, options } of await loadEntries(ENTRIES_DIR)) {
-  list.category(categoryId).addEntry(options);
+if (entriesByCategory.size > 0) {
+  throw new Error(`Unknown category folders in ${ENTRIES_DIR}: ${[
+    ...entriesByCategory.keys(),
+  ].join(", ")}`);
 }
 
 new ListValidator(list, {
   rules: DEFAULT_RULES,
-  findingsFile: process.env.AWESOME_FINDINGS_FILE,
+  findingsFile: process.env[FINDINGS_FILE_ENV],
 });
 
 project.testTask.exec(`awesome-lint ${list.readme.path}`);
@@ -156,13 +187,20 @@ const gitHub = new github.GitHub(project, {
 
 pinActions(gitHub);
 
-new build.BuildWorkflow(project, {
+/**
+ * The build workflow. It runs the projen build on each pull request and on each push to the
+ * default branch.
+ */
+const buildWorkflow = new build.BuildWorkflow(project, {
   buildTask: project.buildTask,
   runsOn: RUNS_ON,
   preBuildSteps: installSteps({
     nodeVersionFile,
   }),
   mutableBuild: false,
+  env: {
+    [FINDINGS_FILE_ENV]: FINDINGS_FILE,
+  },
   permissions: {
     contents: github.workflows.JobPermission.READ,
   },
@@ -177,10 +215,28 @@ new build.BuildWorkflow(project, {
   },
 });
 
+new PrReportWorkflow(gitHub, {
+  buildWorkflow,
+  nodeVersionFile,
+  entriesPath: ENTRIES_PATH,
+});
+
+new AiTriageWorkflow(gitHub, {
+  list,
+  approvers: TRIAGE_APPROVERS,
+  entriesPath: ENTRIES_PATH,
+  nodeVersionFile,
+});
+
+new PrLinksWorkflow(gitHub, {
+  entriesPath: ENTRIES_PATH,
+});
+
 new ContributionTemplates(gitHub, {
   list,
   repositoryUrl: REPOSITORY_URL,
   defaultBranch: DEFAULT_BRANCH,
+  entriesPath: ENTRIES_PATH,
 });
 
 project.synth();

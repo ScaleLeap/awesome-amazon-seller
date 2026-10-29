@@ -118,7 +118,7 @@ export class Entry extends Component implements IEntry {
   public readonly slug: string;
 
   /**
-   * Creates an entry in a category. Use `ICategory.addEntry()` in place of this constructor.
+   * Creates an entry in a category. Add it to the category with `ICategory.addEntry()`.
    */
   constructor(category: ICategory & IConstruct, options: EntryOptions) {
     const slug = slugify(options.name);

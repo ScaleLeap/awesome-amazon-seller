@@ -13,6 +13,7 @@ export const ACTIONS = {
   lychee: "lycheeverse/lychee-action",
   claudeCode: "anthropics/claude-code-action",
   createPullRequest: "peter-evans/create-pull-request",
+  stickyComment: "marocchino/sticky-pull-request-comment",
 } as const;
 
 /**
@@ -41,6 +42,8 @@ const ACTION_PINS: Record<ActionName, string> = {
   "anthropics/claude-code-action": "8041f1d17e0e7d2f2cfe35002962e9f26237c0bb",
   // v8.1.1
   "peter-evans/create-pull-request": "5f6978faf089d4d20b00c7766989d076bb2fc7f1",
+  // v3.0.5
+  "marocchino/sticky-pull-request-comment": "5770ad5eb8f42dd2c4f34da00c94c5381e49af88",
 };
 
 /**

@@ -5,7 +5,7 @@ import { Testing } from "projen";
 import { describe, expect, it } from "vitest";
 import { ListValidator } from "./list-validator.ts";
 import { entryRule } from "./rules/index.ts";
-import { addCategory, createList, entryOptions } from "./testing.ts";
+import { addCategory, addEntry, createList } from "./testing.ts";
 
 /**
  * A rule that gives an error for each entry.
@@ -32,7 +32,7 @@ const alwaysWarnRule = entryRule({
  */
 function createListWithEntry() {
   const list = createList();
-  addCategory(list).addEntry(entryOptions());
+  addEntry(addCategory(list));
 
   return list;
 }
