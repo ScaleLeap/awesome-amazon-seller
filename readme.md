@@ -31,15 +31,14 @@
 - [DataHawk](https://www.datahawk.co/) - An end-to-end platform, with full data control, intuitive dashboards and AI-powered guidance and automation.
 - [Eva](https://eva.guru/) - Connects the most important aspects of your Amazon business into a single intuitive dashboard - price management, replenishments, reimbursements, analytics.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
-- [Feedbackwhiz](https://www.feedbackwhiz.com/) - Software for merchants to boost their Amazon business, repair feedback, improve product reviews, and automate high-volume emails.
 - [Firecrawl](https://www.firecrawl.dev) - Web scraping and search API for Amazon data. Scrape public Amazon pages as markdown (tested on Amazon.com, Amazon.co.uk and Amazon.de), or use structured data providers for Amazon.com (product details, prices, buy-box offers, reviews, search), Amazon.com.br and Amazon.nl.
 - [Flapen](https://flapen.com) - Free real-time dashboard to monitor Amazon category changes in 19 countries and 215 categories.
 - [Forecastly](https://www.forecast.ly/) - Predict future product demand, make fast and accurate buying decisions.
-- [ForecastRx](https://www.forecastrx.com/) - Inventory forecasting solution. Projects future demand so you can purchase the right product, in the right quantity, at the right time.
 - [Helium10](https://www.helium10.com/) - Software suite contains over a dozen tools that help find high ranking keywords, identify trends, monitor competitors, and fully optimize product listings to increase sales.
 - [HelloProfit](https://helloprofit.com/) - Lets you view all your sales & profit data from different merchant accounts from one dashboard.
 - [igly.ai](https://igly.ai/) - Free AI image editor with 12+ tools for e-commerce product photos. Background removal, image generation, inpainting, upscaling, and virtual try-on. Browser-based, no signup required.
 - [Inventory Hero](https://www.inventoryhero.ai) - Automated inventory management for Amazon FBA that forecasts demand, drafts restocks, and works inside Claude via MCP.
+- [Inventory Optimizer](https://inventoryoptimizer.ai/) - Demand forecasting and restock planning for Amazon FBA, AWD and FBM, Shopify and QuickBooks. Formerly ForecastRx.
 - [Jungle Scout](https://www.junglescout.com/) - Track and compare key product metrics, database allows you to filter products across multiple categories by demand, price, estimated sales, rating, seasonality, dimensions and more, find out which products sell and which niches have high opportunity.
 - [Keyword Tool](https://keywordtool.io/amazon) - Finds great keywords using Amazon autocomplete.
 - [ListCraft HQ](https://listcrafthq.com) - Free, no-signup suite of calculators for sellers covering profit margin, markup, break-even, ROAS, CAC, and LTV. No login or paywall.
@@ -49,6 +48,7 @@
 - [Off Hours](https://www.off-hours.app) - Amazon Ads dayparting, budget and bid rules for Seller Central and Vendor Central accounts in all regions. Rules run on the schedules and conditions you set, checked every 15 minutes. Flat $149 per month per Ads account. 14-day free trial.
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
 - [Pangolinfo](https://www.pangolinfo.com/amazon-data-mcp/) - MCP server and REST API with 19 read-only Amazon data tools: product details, reviews, keyword search, category and niche analysis, Best Sellers, New Releases and seller storefronts, plus WIPO trademark and US patent litigation lookups.
+- [Perpetua](https://perpetua.io/) - Advertising software and managed services for Amazon, Instacart and other marketplaces, plus Amazon DSP and Google Ads. Formerly Sellics.
 - [Prisync](https://prisync.com/) - Price monitoring & tracking SaaS with dynamic pricing and automatching engine.
 - [RefVid](https://refvid.com) - AI product video generator that keeps label, logo and packaging consistent across clips, from 1-5 photos or an Amazon product link. Free credits on sign-up.
 - [ScrapeUnblocker](https://docs.scrapeunblocker.com/plugins/amazon) - Web scraping API with Amazon endpoints that return JSON: product pages, search results with sponsored and Prime flags, Best Sellers and other ranked lists, and reviews, across Amazon's regional marketplaces. Also available as an MCP server.
@@ -58,8 +58,7 @@
 - [SellerEngine.app](https://sellerengine.app) - EU-hosted operations dashboard for multi-marketplace Amazon sellers; combines PPC, repricing, inventory forecasting, VAT/OSS and listing checks in one daily view.
 - [SellerLabs](https://www.sellerlabs.com/tools/) - Several tools to manage ads, discover profitable keywords and products, get more product reviews and better seller feedback, simplify inventory and financial management for the amazon marketplace.
 - [SellerLegend](https://sellerlegend.com/) - Near real-time orders download, intelligent KPI dashboards, inventory management, notifications, refunds, historical cost of goods, operating expenses, all America & Europe marketplaces, financial transactions, Europe vat.
-- [Sellics](https://sellics.com) - Combines everything you need to manage and grow your Amazon business in one integrated software. Features that work together to help you become more successful on Amazon.
-- [Skubana](https://www.skubana.com/) - Powers orders, inventory and business intelligence for the world's top high-volume brands and retailers.
+- [Threecolts Seller 365](https://www.threecolts.com/seller-365) - One subscription for ten Amazon seller tools: sourcing, listing, repricing, feedback requests and profit tracking. Includes the former FeedbackWhiz.
 - [Turbo Piranha](https://www.turbopiranha.com/) - Bulk product search, profit calculation and competition analysis software using UPC, ISBN, EAN and ASIN lists in Excel/CSV/TXT format for wholesale and arbitrage business models, and also book sellers/flippers.
 - [Utlista](https://www.utlista.com) - Turns a product catalogue into Amazon listings for seven EU marketplaces. Writes the title, bullets, description and backend search terms for each marketplace, and checks each field against Amazon's limits. Exports a flat file per marketplace. Free for ten products.
 - [Vendlen](https://vendlen.com) - Amazon Ads analytics and automation for sellers on the US marketplace. Each recommendation shows the evidence, period and scope behind it; automation rules run inside limits you set and can be previewed before they change anything. 14-day free trial.
@@ -87,12 +86,12 @@
 
 ## Blogs
 
+- [ChannelX](https://channelx.world/) - News, articles and events for businesses that sell on online marketplaces. Formerly Tamebay.
 - [JumpSend](https://www.jumpsend.com/blog/) - Authored by Greg Mercer and Adam Zlotnik. Tips for sellers on how to increase reviews and listing optimization.
 - [JungleScout](https://www.junglescout.com/blog/) - The most recent Amazon seller resources in the universe. Stay up to date and ahead of the competition with the latest Amazon strategies.
+- [Perpetua](https://perpetua.io/blog/) - Marketplace advertising strategy and Amazon PPC guides. Formerly the Sellics blog.
 - [SellerEngine](https://sellerengine.com/blog/) - A blog with regular updates with an awesome Amazon Account Holder Digest series.
 - [SellerLabs](https://www.sellerlabs.com/blog/) - A blog from SellerLabs with awesome ICYMI: Amazon Seller News series.
-- [Sellics](https://sellics.com/blog) - Strategic advice for sellers.
-- [Tamebay](https://tamebay.com/) - Intelligence and news for all businesses and business people who ply their trade on online marketplaces, whether they are experienced powersellers looking to boost sales, or beginners seeking advice and best practice.
 - [Turbo Piranha](https://www.turbopiranha.com/articles/) - Amazon news, updates, and best practices for e-commerce.
 - [WebRetailer](https://www.webretailer.com/) - A treasure trove of information for sellers and one of the leading resources on the web.
 
