@@ -28,6 +28,11 @@ export interface LoadedEntry {
    * The options that the file exports.
    */
   readonly options: EntryOptions;
+
+  /**
+   * Absolute path of the entry file.
+   */
+  readonly file: string;
 }
 
 /**
@@ -87,10 +92,15 @@ export async function loadEntries(entriesDir: string): Promise<LoadedEntry[]> {
 
     return readdirSync(dir)
       .filter((file) => file.endsWith(ENTRY_FILE_EXTENSION) && !file.endsWith(TEST_FILE_EXTENSION))
-      .map(async (file) => ({
-        categoryId: categoryDir.name,
-        options: await loadEntryFile(join(dir, file)),
-      }));
+      .map(async (name) => {
+        const file = join(dir, name);
+
+        return {
+          categoryId: categoryDir.name,
+          options: await loadEntryFile(file),
+          file,
+        };
+      });
   });
 
   return Promise.all(entries);

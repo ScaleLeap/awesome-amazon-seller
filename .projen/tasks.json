@@ -29,6 +29,24 @@
       "name": "compile",
       "description": "Only compile"
     },
+    "dead-links:apply": {
+      "name": "dead-links:apply",
+      "description": "Update the link health file and remove the entries with expired links",
+      "steps": [
+        {
+          "exec": "node projenrc/tasks/dead-links.ts apply --entries data/entries --report /tmp/dead-links/lychee.json --health data/link-health.json --summary /tmp/dead-links/summary.md"
+        }
+      ]
+    },
+    "dead-links:urls": {
+      "name": "dead-links:urls",
+      "description": "Write all URLs of the list to a file for the link check",
+      "steps": [
+        {
+          "exec": "mkdir -p /tmp/dead-links && node projenrc/tasks/dead-links.ts urls --entries data/entries --out /tmp/dead-links/urls.txt"
+        }
+      ]
+    },
     "default": {
       "name": "default",
       "description": "Synthesize project files",

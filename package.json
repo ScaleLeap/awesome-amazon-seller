@@ -8,6 +8,8 @@
   "scripts": {
     "build": "projen build",
     "compile": "projen compile",
+    "dead-links:apply": "projen dead-links:apply",
+    "dead-links:urls": "projen dead-links:urls",
     "default": "projen default",
     "eject": "projen eject",
     "package": "projen package",

@@ -14,6 +14,7 @@ node_modules/
 !/.github/workflows/pr-report.yml
 !/.github/workflows/ai-triage-gate.yml
 !/.github/workflows/ai-triage.yml
+!/.github/workflows/dead-links.yml
 !/.github/workflows/pr-links.yml
 !/.github/pull_request_template.md
 !/.github/ISSUE_TEMPLATE/config.yml

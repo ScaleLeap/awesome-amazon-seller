@@ -46,6 +46,16 @@ export interface EntryOptions {
 }
 
 /**
+ * Gives all the URLs of an entry: its main URL and its extra links.
+ */
+export function entryUrls(entry: Pick<EntryOptions, "url" | "links">): string[] {
+  return [
+    entry.url,
+    ...(entry.links ?? []).map((link) => link.url),
+  ];
+}
+
+/**
  * A resource in a category of the list.
  */
 export interface IEntry {

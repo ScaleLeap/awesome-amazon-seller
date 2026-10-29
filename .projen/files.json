@@ -7,6 +7,7 @@
     ".github/workflows/ai-triage-gate.yml",
     ".github/workflows/ai-triage.yml",
     ".github/workflows/build.yml",
+    ".github/workflows/dead-links.yml",
     ".github/workflows/pr-links.yml",
     ".github/workflows/pr-report.yml",
     ".gitignore",
