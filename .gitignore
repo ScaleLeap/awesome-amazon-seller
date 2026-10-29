@@ -10,7 +10,7 @@ node_modules/
 !/tsconfig.json
 !/tsconfig.projen.json
 !/readme.md
-!/.github/workflows/ci.yml
+!/.github/workflows/build.yml
 !/.github/pull_request_template.md
 !/.github/ISSUE_TEMPLATE/config.yml
 !/.github/ISSUE_TEMPLATE/suggest-resource.yml
