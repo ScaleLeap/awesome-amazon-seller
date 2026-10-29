@@ -67,6 +67,41 @@ export function checkoutStep(options: CheckoutStepOptions = {}): github.workflow
 }
 
 /**
+ * Options for the step that installs Node.js.
+ */
+export interface SetupNodeStepOptions {
+  /**
+   * File that holds the Node.js version of the project.
+   */
+  readonly nodeVersionFile: FileBase;
+
+  /**
+   * Package manager whose store the step caches.
+   *
+   * @default - no cache
+   */
+  readonly cache?: "pnpm";
+}
+
+/**
+ * Step that installs the Node.js version of the project.
+ */
+export function setupNodeStep(options: SetupNodeStepOptions): github.workflows.JobStep {
+  return {
+    name: "Set up Node.js",
+    uses: ACTIONS.setupNode,
+    with: {
+      "node-version-file": options.nodeVersionFile.path,
+      ...(options.cache === undefined
+        ? {}
+        : {
+          cache: options.cache,
+        }),
+    },
+  };
+}
+
+/**
  * Steps that install Node.js, pnpm and the dependencies. pnpm reads its version from the
  * `packageManager` field of `package.json`.
  */
@@ -76,14 +111,10 @@ export function installSteps(options: InstallStepsOptions): github.workflows.Job
       name: "Set up pnpm",
       uses: ACTIONS.setupPnpm,
     },
-    {
-      name: "Set up Node.js",
-      uses: ACTIONS.setupNode,
-      with: {
-        "node-version-file": options.nodeVersionFile.path,
-        "cache": "pnpm",
-      },
-    },
+    setupNodeStep({
+      nodeVersionFile: options.nodeVersionFile,
+      cache: "pnpm",
+    }),
     {
       name: "Install dependencies",
       run: "pnpm install --frozen-lockfile",
