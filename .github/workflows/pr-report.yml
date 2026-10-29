@@ -53,6 +53,7 @@ jobs:
             echo "::error::The pull request number in the artifact does not agree with pull request $number."
             exit 1
           fi
+          gh api "repos/$REPO/pulls/$number/files" --paginate --jq '.[] | select(.status != "removed") | .filename' > /tmp/pr-report/changed.txt
           added=$(gh api "repos/$REPO/pulls/$number/files" --paginate --jq '.[] | select(.status == "added" and (.filename | startswith("data/entries/"))) | .filename' | wc -l | tr -d ' ')
           echo "number=$number" >> "$GITHUB_OUTPUT"
           echo "added=$added" >> "$GITHUB_OUTPUT"
@@ -63,7 +64,7 @@ jobs:
           CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
           HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
-        run: node projenrc/report/cli.ts --findings /tmp/pr-report/findings.json --conclusion "$CONCLUSION" --run-url "$RUN_URL" --head-sha "$HEAD_SHA" --out /tmp/pr-report/report.md
+        run: node projenrc/report/cli.ts --findings /tmp/pr-report/findings.json --conclusion "$CONCLUSION" --run-url "$RUN_URL" --head-sha "$HEAD_SHA" --out /tmp/pr-report/report.md --changed /tmp/pr-report/changed.txt --entries-path data/entries
       - name: Post the report
         id: post_the_report
         if: steps.pr.outputs.number
