@@ -1,9 +1,9 @@
 import { join } from "node:path";
-import { Project, TextFile, github, javascript, typescript } from "projen";
+import { Project, TextFile, build, github, javascript, typescript } from "projen";
 import { CATEGORIES } from "./data/categories.ts";
 import { AwesomeList } from "./projenrc/awesome-list.ts";
 import { pinActions } from "./projenrc/github/actions.ts";
-import { CiWorkflow } from "./projenrc/github/ci-workflow.ts";
+import { DEFAULT_BRANCH, RUNS_ON, installSteps } from "./projenrc/github/steps.ts";
 import { ContributionTemplates } from "./projenrc/github/templates.ts";
 import { ListValidator } from "./projenrc/list-validator.ts";
 import { loadEntries } from "./projenrc/load-entries.ts";
@@ -146,7 +146,26 @@ const gitHub = new github.GitHub(project, {
 });
 
 pinActions(gitHub);
-new CiWorkflow(gitHub);
+
+new build.BuildWorkflow(project, {
+  buildTask: project.buildTask,
+  runsOn: RUNS_ON,
+  preBuildSteps: installSteps(),
+  mutableBuild: false,
+  permissions: {
+    contents: github.workflows.JobPermission.READ,
+  },
+  workflowTriggers: {
+    pullRequest: {},
+    push: {
+      branches: [
+        DEFAULT_BRANCH,
+      ],
+    },
+    workflowDispatch: {},
+  },
+});
+
 new ContributionTemplates(gitHub, list);
 
 project.synth();
