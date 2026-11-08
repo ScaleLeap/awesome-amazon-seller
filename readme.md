@@ -55,6 +55,7 @@
 - [PixVibe](https://pixvibe.ai/tools/remove-background) - Browser-based background remover that exports product photos on a white or transparent background, with tools to compress, resize and crop images. Free for single images, with no account.
 - [Prisync](https://prisync.com/) - Price monitoring & tracking SaaS with dynamic pricing and automatching engine.
 - [RefVid](https://refvid.com) - AI product video generator that keeps label, logo and packaging consistent across clips, from 1-5 photos or an Amazon product link. Free credits on sign-up.
+- [RemakeThat](https://remakethat.com) - AI tool that remakes winning product videos into original faceless UGC-style clips with an AI creator, for social and affiliate promotion.
 - [ScrapeUnblocker](https://docs.scrapeunblocker.com/plugins/amazon) - Web scraping API with Amazon endpoints that return JSON: product pages, search results with sponsored and Prime flags, Best Sellers and other ranked lists, and reviews, across Amazon's regional marketplaces. Also available as an MCP server.
 - [Sellantica](https://sellantica.ai) - Amazon PPC automation for sellers and agencies: one-click campaign structures, keyword harvesting from auto campaigns, bid optimization with explainable reasoning, and per-product P&L. EU-hosted.
 - [Seller Calculators](https://sellercalculators.com) - Free Amazon fee and profit margin decision tools for multi-channel sellers.
