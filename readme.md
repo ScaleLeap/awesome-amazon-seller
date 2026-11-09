@@ -93,7 +93,6 @@
 ## Blogs
 
 - [ChannelX](https://channelx.world/) - News, articles and events for businesses that sell on online marketplaces. Formerly Tamebay.
-- [JumpSend](https://www.jumpsend.com/blog/) - Authored by Greg Mercer and Adam Zlotnik. Tips for sellers on how to increase reviews and listing optimization.
 - [JungleScout](https://www.junglescout.com/blog/) - The most recent Amazon seller resources in the universe. Stay up to date and ahead of the competition with the latest Amazon strategies.
 - [Perpetua](https://perpetua.io/blog/) - Marketplace advertising strategy and Amazon PPC guides. Formerly the Sellics blog.
 - [SellerEngine](https://sellerengine.com/blog/) - A blog with regular updates with an awesome Amazon Account Holder Digest series.
