@@ -37,6 +37,7 @@
 - [Firecrawl](https://www.firecrawl.dev) - Web scraping and search API for Amazon data. Scrape public Amazon pages as markdown (tested on Amazon.com, Amazon.co.uk and Amazon.de), or use structured data providers for Amazon.com (product details, prices, buy-box offers, reviews, search), Amazon.com.br and Amazon.nl.
 - [Flapen](https://flapen.com) - Free real-time dashboard to monitor Amazon category changes in 19 countries and 215 categories.
 - [Forecastly](https://www.forecast.ly/) - Predict future product demand, make fast and accurate buying decisions.
+- [GTIN & EAN Check](https://workspace.google.com/marketplace/app/gtin_ean_check/331681427270) - Google Sheets add-on that checks a column of EAN, UPC and GTIN codes for a wrong check digit or length, lost leading zeros, scientific notation, invisible characters and repeated codes. Adds a report sheet with the cell of each bad code, and sheet functions such as GTIN_CHECK. Free.
 - [Helium10](https://www.helium10.com/) - Software suite contains over a dozen tools that help find high ranking keywords, identify trends, monitor competitors, and fully optimize product listings to increase sales.
 - [HelloProfit](https://helloprofit.com/) - Lets you view all your sales & profit data from different merchant accounts from one dashboard.
 - [igly.ai](https://igly.ai/) - Free AI image editor with 12+ tools for e-commerce product photos. Background removal, image generation, inpainting, upscaling, and virtual try-on. Browser-based, no signup required.
