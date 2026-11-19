@@ -20,6 +20,7 @@
 - [Advigator](https://www.advigator.com) - Amazon advertising software.
 - [AiHello AutoPilot](https://www.aihello.com/) - Amazon PPC Ads Automation Software.
 - [Amazon Scraper API](https://amazonscraperapi.com) - Production REST API for Amazon product, search, and batch ASIN data across 20 marketplaces. Residential proxies and TLS impersonation handled server-side. 1000 free requests on signup.
+- [amazon-error-compliance-skills](https://github.com/inchTodd/amazon-error-compliance-skills) - MIT-licensed agent skills (Claude, Cursor) that pre-check deal and Prime Exclusive Discount prices, explain coupon errors and triage listing upload error codes from numbers the seller types in. Runs locally and asks for no Seller Central or SP-API credentials.
 - [amztool](https://amztool.me) - Open-web Sponsored Products bulk-sheet generator. Reusable keyword dictionaries, one-click ad-group cloning, exports upload-ready .xlsx. Free tier.
 - [aShop](https://ashop.co) - Effortless microsites for Amazon Sellers. Marketing tool that delivers branded store experience to bring more business and maximize profits.
 - [B2B Supplier Hub](https://b2bsupplierhub.com) - Supplier discovery for Amazon wholesale sellers and resellers. Search by brand, product or UPC to see which distributors carry an item, wholesale cost ranges, stock levels and last-updated dates; pay only to reveal a distributor. Chrome extension shows distributors behind Amazon listings. Free plan.
