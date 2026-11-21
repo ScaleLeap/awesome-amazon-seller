@@ -32,6 +32,7 @@
 - [CorpusIQ](https://www.corpusiq.io) - Connects ChatGPT, Claude and Perplexity read-only to Amazon Seller, Shopify, GA4, QuickBooks and 40+ other systems, and answers questions about the business with the source of each number. From $29.95 a month, with a 30-day free trial.
 - [DataHawk](https://www.datahawk.co/) - An end-to-end platform, with full data control, intuitive dashboards and AI-powered guidance and automation.
 - [Eva](https://eva.guru/) - Connects the most important aspects of your Amazon business into a single intuitive dashboard - price management, replenishments, reimbursements, analytics.
+- [FBA Profit Calculator](https://kingworks-dev.github.io/fba-profit-calculator/) - Free browser calculator for Amazon FBA net profit per unit, margin, ROI and break-even price. No sign-up.
 - [Fbaleaks](https://fbaleaks.com) - Audits FBA inventory and reimbursement reports in the browser. Finds lost or damaged units that Amazon did not reimburse, sorts SKUs to keep, reprice or remove, and drafts appeal letters. Free tools and a one-time paid audit.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
 - [Firecrawl](https://www.firecrawl.dev) - Web scraping and search API for Amazon data. Scrape public Amazon pages as markdown (tested on Amazon.com, Amazon.co.uk and Amazon.de), or use structured data providers for Amazon.com (product details, prices, buy-box offers, reviews, search), Amazon.com.br and Amazon.nl.
