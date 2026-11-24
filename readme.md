@@ -31,6 +31,7 @@
 - [ChineseCheck](https://chinesecheck.com) - Verify a Chinese supplier before paying: look up the company by English name, Chinese name or Unified Social Credit Code and read its registration record in English for free; paid reports add court enforcement, litigation and penalty records.
 - [CorpusIQ](https://www.corpusiq.io) - Connects ChatGPT, Claude and Perplexity read-only to Amazon Seller, Shopify, GA4, QuickBooks and 40+ other systems, and answers questions about the business with the source of each number. From $29.95 a month, with a 30-day free trial.
 - [DataHawk](https://www.datahawk.co/) - An end-to-end platform, with full data control, intuitive dashboards and AI-powered guidance and automation.
+- [EconoFlip](https://econoflip.com) - Free Chrome extension that shows the Buy Box price, FBA and referral fees, sales tax and estimated net profit of each product while you browse a supported store's website in Canada or the US.
 - [Eva](https://eva.guru/) - Connects the most important aspects of your Amazon business into a single intuitive dashboard - price management, replenishments, reimbursements, analytics.
 - [Fbaleaks](https://fbaleaks.com) - Audits FBA inventory and reimbursement reports in the browser. Finds lost or damaged units that Amazon did not reimburse, sorts SKUs to keep, reprice or remove, and drafts appeal letters. Free tools and a one-time paid audit.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
