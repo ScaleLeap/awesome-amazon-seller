@@ -81,6 +81,8 @@
 - [Ryndix Amazon category data](https://github.com/Ryndix/ryndix-category-data) - Free CC BY 4.0 dataset of Amazon US category snapshots: units, price bands, review distribution, cost per click, fee load and pre-advertising unit economics for five categories.
 - [Trends MCP](https://www.trendsmcp.ai) - MCP server and REST API with trend data from Amazon, Google Search, Google Shopping, TikTok, YouTube and other sources, for demand research in an AI assistant. Free plan with 100 requests a month. [GitHub](https://github.com/trendsmcp-ai/Trends-MCP)
 - [USPTO Patent Public Search](https://www.uspto.gov/patents/search/patent-public-search) - Official USPTO search tool for U.S. patents and patent application publications.
+- [Etsy Search Scraper](https://apify.com/publicrecords/etsy-search-scraper) - Etsy search results by keyword: price, rating, reviews, Bestseller badge, ad flag, rank (Apify Actor, API + MCP).
+- [Etsy Shop Daily Sales](https://apify.com/publicrecords/etsy-shop-velocity) - Daily, 7-day and 28-day sales for Etsy shops from each shop's public sales counter (Apify Actor, API + MCP).
 
 ## Podcasts
 
