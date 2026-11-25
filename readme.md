@@ -34,6 +34,7 @@
 - [Eva](https://eva.guru/) - Connects the most important aspects of your Amazon business into a single intuitive dashboard - price management, replenishments, reimbursements, analytics.
 - [Fbaleaks](https://fbaleaks.com) - Audits FBA inventory and reimbursement reports in the browser. Finds lost or damaged units that Amazon did not reimburse, sorts SKUs to keep, reprice or remove, and drafts appeal letters. Free tools and a one-time paid audit.
 - [FeedbackExpress](https://www.feedbackexpress.com/) - Makes it easy to improve your Amazon seller rating through effective, automated feedback requests.
+- [FeeSlate Amazon FBA Fee Calculator](https://feeslate.com/amazon-fba-fee-calculator/) - Free, no-signup U.S. Amazon FBA referral and fulfillment fee calculator with forward net-payout math, reverse target-payout pricing, and links to official Amazon fee schedules.
 - [Firecrawl](https://www.firecrawl.dev) - Web scraping and search API for Amazon data. Scrape public Amazon pages as markdown (tested on Amazon.com, Amazon.co.uk and Amazon.de), or use structured data providers for Amazon.com (product details, prices, buy-box offers, reviews, search), Amazon.com.br and Amazon.nl.
 - [Flapen](https://flapen.com) - Free real-time dashboard to monitor Amazon category changes in 19 countries and 215 categories.
 - [Forecastly](https://www.forecast.ly/) - Predict future product demand, make fast and accurate buying decisions.
