@@ -52,6 +52,7 @@
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
 - [Pangolinfo](https://www.pangolinfo.com/amazon-data-mcp/) - MCP server and REST API with 19 read-only Amazon data tools: product details, reviews, keyword search, category and niche analysis, Best Sellers, New Releases and seller storefronts, plus WIPO trademark and US patent litigation lookups.
 - [Perpetua](https://perpetua.io/) - Advertising software and managed services for Amazon, Instacart and other marketplaces, plus Amazon DSP and Google Ads. Formerly Sellics.
+- [PixLasso](https://pixlasso.com/) - Chrome and Edge extension that saves the images of a product page, or of many open listings, in one ZIP at the largest size it finds, with one folder per product. Converts WebP to JPG or PNG locally. Free up to 30 images per batch; Pro is a one-time $9.99.
 - [PixVibe](https://pixvibe.ai/tools/remove-background) - Browser-based background remover that exports product photos on a white or transparent background, with tools to compress, resize and crop images. Free for single images, with no account.
 - [Prisync](https://prisync.com/) - Price monitoring & tracking SaaS with dynamic pricing and automatching engine.
 - [RefVid](https://refvid.com) - AI product video generator that keeps label, logo and packaging consistent across clips, from 1-5 photos or an Amazon product link. Free credits on sign-up.
