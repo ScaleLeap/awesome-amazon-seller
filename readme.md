@@ -47,6 +47,7 @@
 - [ListCraft HQ](https://listcrafthq.com) - Free, no-signup suite of calculators for sellers covering profit margin, markup, break-even, ROAS, CAC, and LTV. No login or paywall.
 - [Listimo](https://listimo.ai/en/) - AI listing checker (score 0-100) and generator for Amazon titles, bullet points, A+ content, listing images and video from one product photo. First check free without signup; credits instead of a subscription.
 - [ListingPic](https://listingpic.com/amazon-product-image-checker/) - Free browser-based tool for checking Amazon product images and marketplace listing thumbnails before publishing.
+- [Margin and ROAS Kit](https://quietstack-labs.github.io/ecommerce-margin-roas-kit/) - Free, open-source browser calculator for per-order profit, break-even ROAS, ACoS and CPA after platform, payment and return costs, with a bulk SKU CSV mode. No sign-up. [GitHub](https://github.com/quietstack-labs/ecommerce-margin-roas-kit)
 - [MerchantWords](https://www.merchantwords.com/) - Finds highly specific keyword phrases that help buyers find what you are selling.
 - [Off Hours](https://www.off-hours.app) - Amazon Ads dayparting, budget and bid rules for Seller Central and Vendor Central accounts in all regions. Rules run on the schedules and conditions you set, checked every 15 minutes. Flat $149 per month per Ads account. 14-day free trial.
 - [Packrift Packaging Fit Lab](https://packrift.github.io/packaging-fit-lab/) - Free packaging fit tool for comparing item dimensions against carton and mailer options before FBA or merchant-fulfilled shipping.
