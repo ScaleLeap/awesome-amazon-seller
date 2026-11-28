@@ -21,6 +21,7 @@
 - [AiHello AutoPilot](https://www.aihello.com/) - Amazon PPC Ads Automation Software.
 - [Amazon Scraper API](https://amazonscraperapi.com) - Production REST API for Amazon product, search, and batch ASIN data across 20 marketplaces. Residential proxies and TLS impersonation handled server-side. 1000 free requests on signup.
 - [amztool](https://amztool.me) - Open-web Sponsored Products bulk-sheet generator. Reusable keyword dictionaries, one-click ad-group cloning, exports upload-ready .xlsx. Free tier.
+- [Apiwren Amazon Data API](https://rapidapi.com/apiwren-apiwren-default/api/amazon-data-api-search-product-reviews-best-sellers) - REST API that returns Amazon search results, product details, every seller's offer, reviews and best sellers for 23 marketplaces as JSON, without a PA-API or Associates account. Free plan of 20 requests a month on RapidAPI.
 - [aShop](https://ashop.co) - Effortless microsites for Amazon Sellers. Marketing tool that delivers branded store experience to bring more business and maximize profits.
 - [B2B Supplier Hub](https://b2bsupplierhub.com) - Supplier discovery for Amazon wholesale sellers and resellers. Search by brand, product or UPC to see which distributors carry an item, wholesale cost ranges, stock levels and last-updated dates; pay only to reveal a distributor. Chrome extension shows distributors behind Amazon listings. Free plan.
 - [BQool](https://www.bqool.com/) - Scheduled repricing, compete against buy box price, comprehensive dashboard & reports, repricing history log.
